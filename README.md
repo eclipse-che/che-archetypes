@@ -5,18 +5,18 @@ You can use Maven Archetypes to generate sample custom assemblies. These custom 
 
 Codenvy is a version of Eclipse Che that adds multi-tenancy, user authentication, and multi-node workspace scaling. Codenvy can also be customed with custom assemblies based upon Eclipse Che archetypes.
 
-## Build
-To compile the archetype generator, run:
+## Build Generator
+To compile the generator:
 
 `mvn clean install`
 
-## Use
+## Use Generator
 There are three phases:
 1. Generate a new custom assembly repository
 2. Build it with maven
 3. Run it with the Che CLI
 
-#### Generate
+#### Generate Assembly
 A custom assembly is a complete Eclipse Che binary. You can configure the following as part of the generation:
 1. The archetype name chooses what customizations will be included.
 2. The archetypeVersion will generate a Che assembly that inherits from a matching Che version.
@@ -35,13 +35,13 @@ mvn archetype:generate                                \
 
 This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, and `run.sh` scripts to simplfy compiling and running the new install.
 
-#### Build
+#### Build Assembly
 ```
 # Go into your new repository
 cd <ARTIFACTID>
 mvn clean install
 ```
-#### Run
+#### Run Assembly
 
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
