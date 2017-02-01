@@ -17,7 +17,11 @@ There are three phases:
 3. Run it with the Che CLI
 
 #### Generate
-A custom assembly is a complete Eclipse Che binary.
+A custom assembly is a complete Eclipse Che binary. You can configure the following as part of the generation:
+1. The archetype name chooses what customizations will be included.
+2. The archetypeVersion will generate a Che assembly that inherits from a matching Che version.
+3. Set the `groupId` and `artifactId` to unique values to create a UUID identifier of your new assembly.
+
 ```
 mvn archetype:generate                                \
   -DarchetypeGroupId=org.eclipse.che.archetype        \
@@ -28,8 +32,24 @@ mvn archetype:generate                                \
   -Dche=<CHE-VERSION                                  \
   -Dversion=<VALUE>
 ```
+
+This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, and `run.sh` scripts to simplfy compiling and running the new install.
+
 #### Build
+```
+# Go into your new repository
+cd <ARTIFACTID>
+mvn clean install
+```
 #### Run
+
+#### Archetype List
+| archetypeArtifactId   | Descriptions                              |
+|-----------------------|-------------------------------------------|
+| `che-plugin-ide-menu-archetype` |  left-aligned                     |
+| `archetype-plugin-wizard` |  left-aligned                     |
+
+
 
 ## Create Menu Sample, including custom menu entry with 'Say Hello' action :
 
