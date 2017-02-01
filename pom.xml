@@ -32,11 +32,9 @@
         </license>
     </licenses>
     <modules>
-        <module>archetype-plugin-wizard</module>
+        <module>che-plugin-ide-menu-archetype</module>
+        <module>che-plugin-ide-wizard-archetype</module>
     </modules>
-    <properties>
-        <che.version>5.2.0-SNAPSHOT</che.version>
-    </properties>
     <dependencyManagement>
         <dependencies />
     </dependencyManagement>
