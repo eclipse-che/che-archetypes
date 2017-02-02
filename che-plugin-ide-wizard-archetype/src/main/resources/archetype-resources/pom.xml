@@ -33,7 +33,7 @@
         </license>
     </licenses>
     <properties>
-        <che.version>${che}</che.version>
+        <che.version>${cheVersion}</che.version>
     </properties>
     <dependencyManagement>
         <dependencies>

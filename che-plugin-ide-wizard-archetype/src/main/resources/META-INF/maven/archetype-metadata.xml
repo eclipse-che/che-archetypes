@@ -17,7 +17,8 @@
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
-        <requiredProperty key="che">
+        <requiredProperty key="cheVersion">
+            <defaultValue>5.3.0-SNAPSHOT</defaultValue>
         </requiredProperty>
     </requiredProperties>
     <modules>
