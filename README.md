@@ -23,13 +23,14 @@ A custom assembly is a complete Eclipse Che binary. You can configure the follow
 3. Set the `groupId` and `artifactId` to unique values to create a UUID identifier of your new assembly.
 
 ```
-mvn archetype:generate                                \
-  -DarchetypeGroupId=org.eclipse.che.archetype        \
-  -DarchetypeArtifactId=<ARCHETYPE-NAME>              \
-  -DarchetypeVersion=1.0-SNAPSHOT                     \
-  -DgroupId=<VALUE>                                   \
-  -DartifactId=<VALUE>                                \
-  -Dche=<CHE-VERSION                                  \
+mvn archetype:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=<ARCHETYPE-NAME>                                    \
+  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DcheVersion=<CHE-VERSION>                                                \
+  -DgroupId=<VALUE>                                                         \
+  -DartifactId=<VALUE>                                                      \
   -Dversion=<VALUE>
 ```
 
@@ -47,7 +48,7 @@ mvn clean install
 | archetypeArtifactId   | Descriptions                              |
 |-----------------------|-------------------------------------------|
 | `che-plugin-ide-menu-archetype` |  left-aligned                     |
-| `archetype-plugin-wizard` |  left-aligned                     |
+| `che-plugin-ide-wizard-archetype` |  left-aligned                     |
 
 
 
@@ -55,13 +56,14 @@ mvn clean install
 
 ### Create sample
 ```
-mvn archetype:generate                                \
-  -DarchetypeGroupId=org.eclipse.che.archetype        \
-  -DarchetypeArtifactId=che-plugin-ide-menu-archetype \
-  -DarchetypeVersion=1.0-SNAPSHOT                     \
-  -DgroupId=my.plugin                                 \
-  -DartifactId=menu-sample                            \
-  -Dche=5.2.0-SNAPSHOT                                \
+mvn archetype:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=che-plugin-ide-menu-archetype                       \
+  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DcheVersion=5.3.0-SNAPSHOT                                               \
+  -DgroupId=my.plugin                                                       \
+  -DartifactId=menu-sample                                                  \
   -Dversion=0.1-SNAPSHOT
 ```
 
@@ -82,14 +84,24 @@ docker run -it --rm  \
 
 ### Create sample
 ```
-mvn archetype:generate                               \
-  -DarchetypeGroupId=org.eclipse.che.archetype       \
-  -DarchetypeArtifactId=archetype-plugin-wizard      \
-  -DarchetypeVersion=1.0-SNAPSHOT                    \
-  -DgroupId=my.plugin                                \
-  -DartifactId=wizard-sample                         \
-  -Dche=5.2.0-SNAPSHOT                               \
-  -Dversion=0.1-SNAPSHOT                             
+mvn archetype:generate                                \
+  -DarchetypeGroupId=org.eclipse.che.archetype        \
+  -DarchetypeArtifactId=archetype-plugin-wizard       \
+  -DarchetypeVersion=1.0-SNAPSHOT                     \
+  -DarchetypeRepository=https://maven.codenvycorp.com \
+  -DgroupId=my.plugin                                 \
+  -DartifactId=wizard-sample                          \
+  -DcheVersion=5.3.0-SNAPSHOT                         \
+  -Dversion=0.1-SNAPSHOT
+  
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=che-plugin-ide-wizard-archetype                     \
+  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DcheVersion=5.3.0-SNAPSHOT                                               \
+  -DgroupId=my.plugin                                                       \
+  -DartifactId=menu-sample                                                  \
+  -Dversion=0.1-SNAPSHOT                               
 ```
 
 ### Build
