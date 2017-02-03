@@ -29,7 +29,7 @@ mvn archetype:generate                                \
   -DarchetypeVersion=1.0-SNAPSHOT                     \
   -DgroupId=<VALUE>                                   \
   -DartifactId=<VALUE>                                \
-  -Dche=<CHE-VERSION                                  \
+  -Dche=<CHE-VERSION>                                 \
   -Dversion=<VALUE>
 ```
 
@@ -46,6 +46,7 @@ mvn clean install
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
 |-----------------------|-------------------------------------------|
+| `che-agent-archetype` |  left-aligned                     |
 | `che-plugin-ide-menu-archetype` |  left-aligned                     |
 | `archetype-plugin-wizard` |  left-aligned                     |
 

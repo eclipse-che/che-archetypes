@@ -16,7 +16,7 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>org.eclipse.che.depmgt</groupId>
-        <version>5.1.0</version>
+        <version>5.3.0-SNAPSHOT</version>
     </parent>
     <groupId>org.eclipse.che.archetype</groupId>
     <artifactId>eclipse-che-archetype-parent</artifactId>
@@ -34,6 +34,7 @@
     <modules>
         <module>che-plugin-ide-menu-archetype</module>
         <module>che-plugin-ide-wizard-archetype</module>
+        <module>che-agent-archetype</module>
     </modules>
     <dependencyManagement>
         <dependencies />

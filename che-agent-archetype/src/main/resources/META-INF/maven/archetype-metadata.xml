@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2012-2017 Codenvy, S.A.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+      Codenvy, S.A. - initial API and implementation
+
+-->
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="agent-parent"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="che"/>
+    </requiredProperties>
+    <modules>
+        <module id="agents" dir="agents" name="agents">
+            <modules>
+                <module id="__rootArtifactId__" dir="__rootArtifactId__" name="__rootArtifactId__">
+                    <fileSets>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/main/java</directory>
+                            <includes>
+                                <include>**/*.java</include>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </fileSet>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/main/resources</directory>
+                            <includes>
+                                <include>**/*.json</include>
+                                <include>**/*.sh</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+            </modules>
+        </module>
+        <module id="che-assembly-parent" dir="assembly" name="che-assembly-parent">
+            <modules>
+                <module id="assembly-wsmaster-war" dir="assembly-wsmaster-war" name="assembly-wsmaster-war">
+                    <fileSets>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/assembly</directory>
+                            <includes>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+                <module id="assembly-main" dir="assembly-main" name="assembly-main">
+                    <fileSets>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/assembly</directory>
+                            <includes>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+            </modules>
+        </module>
+    </modules>
+</archetype-descriptor>
