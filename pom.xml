@@ -34,6 +34,7 @@
     <modules>
         <module>che-plugin-ide-menu-archetype</module>
         <module>che-plugin-ide-wizard-archetype</module>
+        <module>che-agent-archetype</module>
     </modules>
     <dependencyManagement>
         <dependencies />

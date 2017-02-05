@@ -47,6 +47,7 @@ mvn clean install
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
 |-----------------------|-------------------------------------------|
+| `che-agent-archetype` |  left-aligned                     |
 | `che-plugin-ide-menu-archetype` |  left-aligned                     |
 | `che-plugin-ide-wizard-archetype` |  left-aligned                     |
 
