@@ -118,5 +118,29 @@ docker run -it --rm  \
 
 ```
 
+## Create agent sample:
+
+```
+mvn archetype:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=che-agent-archetype                                 \
+  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DcheVersion=5.3.0-SNAPSHOT                                               \
+  -DgroupId=my.agent                                                        \
+  -DartifactId=agent-sample                                                 \
+  -Dversion=0.1-SNAPSHOT
+```
 
 
+### Build
+Go to agent-sample folder and run ``` mvn clean install```
+
+### Run
+```
+docker run -it --rm  \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ -v /tmp/.agent-sample/data:/data \
+ -v {path to agent-sample}/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
+ eclipse/che-cli:nightly start
+```
