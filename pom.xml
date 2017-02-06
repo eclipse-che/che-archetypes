@@ -31,15 +31,15 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <properties>
-        <version.archetype.plugin>2.4</version.archetype.plugin>
-    </properties>
     <modules>
         <module>che-archetype-resources</module>
         <module>che-plugin-ide-menu-archetype</module>
         <module>che-plugin-ide-wizard-archetype</module>
         <module>che-agent-archetype</module>
     </modules>
+    <properties>
+        <version.archetype.plugin>2.4</version.archetype.plugin>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>

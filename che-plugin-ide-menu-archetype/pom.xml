@@ -11,8 +11,7 @@
       Codenvy, S.A. - initial API and implementation
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>eclipse-che-archetype-parent</artifactId>
@@ -47,8 +46,15 @@
                 <version>2.3</version>
             </extension>
         </extensions>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
-
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
@@ -74,8 +80,7 @@
                                 <artifactItem>
                                     <groupId>org.eclipse.che.archetype</groupId>
                                     <artifactId>che-archetype-resources</artifactId>
-                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources
-                                    </outputDirectory>
+                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>

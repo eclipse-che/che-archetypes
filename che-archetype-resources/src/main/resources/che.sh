@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Copyright (c) 2012-2017 Codenvy, S.A.
 # All rights reserved. This program and the accompanying materials
@@ -14,11 +14,6 @@
 set -e
 set -u
 
-
-
-
-
-
 build(){
   #TODO detect m2 repo from settings.xml
   docker_exec run -it --rm --name build-che \
@@ -31,15 +26,13 @@ build(){
 }
 
 run(){
-
-docker_exec run --rm ${DOCKER_RUN_OPTIONS} $2 \
-       -v "${BATS_BASE_DIR}":/dockerfiles \
-       -e CLI_IMAGE_TAG=$TAG \
-       -e BATS_BASE_DIR="${BATS_BASE_DIR}" \
-       -v /var/run/docker.sock:/var/run/docker.sock \
-           $IMAGE_NAME bats ${BATS_OPTIONS} /dockerfiles/cli/tests/$1
-
-}
+#TODO detect version of assembly. detect version of che
+docker_exec run -it --rm  ${DOCKER_RUN_OPTIONS}  \
+         -v /var/run/docker.sock:/var/run/docker.sock \
+         -v /tmp/.wizard-sample/data:/data \
+         -v "$PWD"/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
+         eclipse/che-cli:nightly start
+ }
 
 init() {
   init_constants
