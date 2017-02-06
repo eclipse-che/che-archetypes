@@ -31,6 +31,9 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <properties>
+        <version.archetype.plugin>2.4</version.archetype.plugin>
+    </properties>
     <modules>
         <module>che-archetype-resources</module>
         <module>che-plugin-ide-menu-archetype</module>
