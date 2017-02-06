@@ -143,6 +143,4 @@ docker run -it --rm  \
  -v /tmp/.agent-sample/data:/data \
  -v {path to agent-sample}/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
  eclipse/che-cli:nightly start
-
 ```
-
