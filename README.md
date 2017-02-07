@@ -5,10 +5,6 @@ You can use Maven Archetypes to generate sample custom assemblies. These custom 
 
 Codenvy is a version of Eclipse Che that adds multi-tenancy, user authentication, and multi-node workspace scaling. Codenvy can also be customed with custom assemblies based upon Eclipse Che archetypes.
 
-## Build Generator
-To compile the generator:
-
-`mvn clean install`
 
 ## Use Generator
 There are three phases:
@@ -28,7 +24,6 @@ mvn archetype:generate                                                      \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=<ARCHETYPE-NAME>                                    \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DcheVersion=<CHE-VERSION>                                                \
   -DgroupId=<VALUE>                                                         \
   -DartifactId=<VALUE>                                                      \
   -Dversion=<VALUE>
@@ -62,60 +57,45 @@ mvn archetype:generate                                                      \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=che-plugin-ide-menu-archetype                       \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DcheVersion=5.3.0-SNAPSHOT                                               \
   -DgroupId=my.plugin                                                       \
   -DartifactId=menu-sample                                                  \
   -Dversion=0.1-SNAPSHOT
 ```
 
 ### Build
-Go to menu-sample and run ``` mvn clean install```
+Go to menu-sample and run 
+```
+./che.sh --build
+```
 
 ### Run
 ```
-docker run -it --rm  \
- -v /var/run/docker.sock:/var/run/docker.sock \
- -v /tmp/.menu-sample/data:/data \
- -v {path to menu-sample}/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
- eclipse/che-cli:nightly start
-
+./che.sh --run
 ```
 
 ## Create Wizard Sample, including custom project type and custom file creation action:
 
 ### Create sample
 ```
-mvn archetype:generate                                \
-  -DarchetypeGroupId=org.eclipse.che.archetype        \
-  -DarchetypeArtifactId=archetype-plugin-wizard       \
-  -DarchetypeVersion=1.0-SNAPSHOT                     \
-  -DarchetypeRepository=https://maven.codenvycorp.com \
-  -DgroupId=my.plugin                                 \
-  -DartifactId=wizard-sample                          \
-  -DcheVersion=5.3.0-SNAPSHOT                         \
-  -Dversion=0.1-SNAPSHOT
-  
+mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=che-plugin-ide-wizard-archetype                     \
+  -DarchetypeArtifactId=archetype-plugin-wizard                             \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DcheVersion=5.3.0-SNAPSHOT                                               \
   -DgroupId=my.plugin                                                       \
-  -DartifactId=menu-sample                                                  \
-  -Dversion=0.1-SNAPSHOT                               
+  -DartifactId=wizard-sample                                                \
+  -Dversion=0.1-SNAPSHOT                            
 ```
 
 ### Build
-Go to wizard-sample and run ``` mvn clean install```
+Go to wizard-sample and run 
+```
+./che.sh --build
+```
 
 ### Run
 ```
-docker run -it --rm  \
- -v /var/run/docker.sock:/var/run/docker.sock \
- -v /tmp/.wizard-sample/data:/data \
- -v {path to wizard-sample}/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
- eclipse/che-cli:nightly start
-
+./che.sh --run
 ```
 
 ## Create agent sample:
@@ -126,21 +106,19 @@ mvn archetype:generate                                                      \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=che-agent-archetype                                 \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DcheVersion=5.3.0-SNAPSHOT                                               \
   -DgroupId=my.agent                                                        \
   -DartifactId=agent-sample                                                 \
-  -Dversion=0.1-SNAPSHOT
+  -Dversion=0.1-SNAPSHOT  
 ```
 
 
 ### Build
-Go to agent-sample folder and run ``` mvn clean install```
+Go to agent-sample folder and run 
+```
+./che.sh --build
+```
 
 ### Run
 ```
-docker run -it --rm  \
- -v /var/run/docker.sock:/var/run/docker.sock \
- -v /tmp/.agent-sample/data:/data \
- -v {path to agent-sample}/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
- eclipse/che-cli:nightly start
+./che.sh --run
 ```
