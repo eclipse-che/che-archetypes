@@ -80,7 +80,7 @@ Go to menu-sample and run
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=archetype-plugin-wizard                             \
+  -DarchetypeArtifactId=che-plugin-ide-wizard-archetype                             \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=wizard-sample                                                \
