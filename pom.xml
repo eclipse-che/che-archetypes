@@ -32,12 +32,22 @@
         </license>
     </licenses>
     <modules>
+        <module>che-archetype-resources</module>
         <module>che-plugin-ide-menu-archetype</module>
         <module>che-plugin-ide-wizard-archetype</module>
         <module>che-agent-archetype</module>
     </modules>
+    <properties>
+        <version.archetype.plugin>2.4</version.archetype.plugin>
+    </properties>
     <dependencyManagement>
-        <dependencies />
+        <dependencies>
+            <dependency>
+                <groupId>org.eclipse.che.archetype</groupId>
+                <artifactId>che-archetype-resources</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
     <repositories>
         <repository>
