@@ -62,6 +62,7 @@
                     <excludes>
                         <exclude>**/assembly/pom.xml</exclude>
                         <exclude>**/goal.txt</exclude>
+                        <exclude>**/archetype-resources/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>
