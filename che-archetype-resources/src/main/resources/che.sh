@@ -120,9 +120,9 @@ docker_exec() {
 }
 
 has_docker_for_windows_client(){
-  GLOBAL_HOST_ARCH=$(docker version --format {{.Client}} | cut -d" " -f5)
+  GLOBAL_HOST_ARCH=$(docker version --format {{.Client}})
 
-  if [ "${GLOBAL_HOST_ARCH}" = "windows" ]; then
+ if [[ "${GLOBAL_HOST_ARCH}" == *"windows"*  ]]; then
     return 0
   else
     return 1
