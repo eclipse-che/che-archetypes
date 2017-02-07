@@ -21,6 +21,16 @@
             <defaultValue>5.3.0-SNAPSHOT</defaultValue>
         </requiredProperty>
     </requiredProperties>
+    <fileSets>
+        <fileSet filtered="false" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>che.sh</include>
+                <include>LICENSE</include>
+                <include>.mvn/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
     <modules>
         <module id="agents" dir="agents" name="agents">
             <modules>
