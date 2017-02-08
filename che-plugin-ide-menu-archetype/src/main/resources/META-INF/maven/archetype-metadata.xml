@@ -25,7 +25,10 @@
         <fileSet filtered="false" encoding="UTF-8">
             <directory></directory>
             <includes>
-                <include>che.sh</include>
+                <include>build.include</include>
+                <include>build.sh</include>
+                <include>start.sh</include>
+                <include>stop.sh</include>
                 <include>LICENSE</include>
                 <include>.mvn/*</include>
             </includes>
