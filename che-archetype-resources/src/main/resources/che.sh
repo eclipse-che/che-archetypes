@@ -15,6 +15,11 @@ set -e
 set -u
 
 build(){
+  if has_docker_for_windows_client; then
+    # Convert files to Unix format with dos2unix
+    /usr/bin/find . -type f -exec dos2unix {} \;
+  fi
+
   #TODO detect m2 repo from settings.xml
   docker_exec run -it --rm --name build-che \
            -v "$HOME/.m2:/home/user/.m2"    \
