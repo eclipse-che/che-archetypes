@@ -34,7 +34,7 @@ run(){
 #TODO detect version of assembly. detect version of che
 docker_exec run -it --rm  ${DOCKER_RUN_OPTIONS}  \
          -v /var/run/docker.sock:/var/run/docker.sock \
-         -v /tmp/.wizard-sample/data:/data \
+         -v "$HOME/.che/sample/data:/data" \
          -v "$PWD"/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT:/assembly \
          eclipse/che-cli:nightly start
  }
