@@ -23,6 +23,9 @@
     <packaging>maven-archetype</packaging>
     <name>che-agent-archetype</name>
     <description>Contains sample Agent, that outputs 'Hello, Agent!' on workspace startup</description>
+    <properties>
+        <che.version>5.3.0-SNAPSHOT</che.version>
+    </properties>
     <build>
         <extensions>
             <extension>
@@ -85,6 +88,22 @@
                                     </outputDirectory>
                                 </artifactItem>
                             </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <replace dir="${basedir}/target" token="@che.version@" value ="${che.version}"></replace>
+                            </tasks>
                         </configuration>
                     </execution>
                 </executions>

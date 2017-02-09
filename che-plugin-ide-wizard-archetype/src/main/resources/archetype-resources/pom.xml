@@ -30,7 +30,7 @@
         </license>
     </licenses>
     <properties>
-        <che.version>${cheVersion}</che.version>
+        <che.version>@che.version@</che.version>
     </properties>
     <dependencyManagement>
         <dependencies>
