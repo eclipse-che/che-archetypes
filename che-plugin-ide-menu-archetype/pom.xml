@@ -98,7 +98,7 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <replace dir="${basedir}/target" token="$${cheVersion}" value="${che.version}" />
+                                <replace dir="${project.build.outputDirectory}/archetype-resources" token="$${cheVersion}" value="${che.version}" />
                             </tasks>
                         </configuration>
                     </execution>
