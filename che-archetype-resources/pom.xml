@@ -21,4 +21,15 @@
     <artifactId>che-archetype-resources</artifactId>
     <packaging>jar</packaging>
     <description>Provides common resources for che archetypes</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
