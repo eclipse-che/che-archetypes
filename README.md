@@ -33,11 +33,26 @@ This generates a custom assembly in XXX. This assembly is git-repo check-in read
 
 #### Build Assembly
 ```
-# Go into your new repository
+# Go into your new assembly
 cd <ARTIFACTID>
+
+# Build project
 mvn clean install
 ```
+```
+# Alternatively, run script to build it in container
+./build.sh
+```
 #### Run Assembly
+```
+# Run this Che assembly
+./run.sh
+```
+#### Stop Assembly
+```
+# Stop Che
+./stop.sh
+```
 
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
@@ -73,6 +88,11 @@ Go to menu-sample and run
 ./run.sh
 ```
 
+### Stop
+```
+./stop.sh
+```
+
 ## Create Wizard Sample, including custom project type and custom file creation action:
 
 ### Create sample
@@ -98,6 +118,11 @@ Go to wizard-sample and run
 ./run.sh
 ```
 
+### Stop
+```
+./stop.sh
+```
+
 ## Create agent sample:
 
 ```
@@ -121,4 +146,9 @@ Go to agent-sample folder and run
 ### Run
 ```
 ./run.sh
+```
+
+### Stop
+```
+./stop.sh
 ```
