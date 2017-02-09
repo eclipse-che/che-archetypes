@@ -22,7 +22,7 @@
     <artifactId>che-plugin-ide-wizard-archetype</artifactId>
     <packaging>maven-archetype</packaging>
     <name>che-plugin-ide-wizard-archetype</name>
-    <description>Provides version of third parties artifacts to use in Codenvy platform projects</description>
+    <description>Contains sample project type, based on C language, as well as action to create new .c files</description>
     <build>
         <extensions>
             <extension>

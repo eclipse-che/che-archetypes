@@ -22,7 +22,7 @@
     <artifactId>che-agent-archetype</artifactId>
     <packaging>maven-archetype</packaging>
     <name>che-agent-archetype</name>
-    <description>Provides version of third parties artifacts to use in Codenvy platform projects</description>
+    <description>Contains sample Agent, that outputs 'Hello, Agent!' on workspace startup</description>
     <build>
         <extensions>
             <extension>

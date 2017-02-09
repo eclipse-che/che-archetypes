@@ -22,7 +22,7 @@
     <artifactId>che-plugin-ide-menu-archetype</artifactId>
     <packaging>maven-archetype</packaging>
     <name>che-plugin-ide-menu-archetype</name>
-    <description>Provides version of third parties artifacts to use in Codenvy platform projects</description>
+    <description>Contains sample menu entry with 'Say hello' action that pops up a notification</description>
     <build>
         <extensions>
             <extension>
