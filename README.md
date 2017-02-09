@@ -29,7 +29,7 @@ mvn archetype:generate                                                      \
   -Dversion=<VALUE>
 ```
 
-This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, and `run.sh` scripts to simplfy compiling and running the new install.
+This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, `run.sh` and `stop.sh` scripts to simplfy compiling and running the new install.
 
 #### Build Assembly
 ```
@@ -65,12 +65,12 @@ mvn archetype:generate                                                      \
 ### Build
 Go to menu-sample and run 
 ```
-./che.sh --build
+./build.sh
 ```
 
 ### Run
 ```
-./che.sh --run
+./run.sh
 ```
 
 ## Create Wizard Sample, including custom project type and custom file creation action:
@@ -90,12 +90,12 @@ mvn archetype:generate                                                      \
 ### Build
 Go to wizard-sample and run 
 ```
-./che.sh --build
+./build.sh
 ```
 
 ### Run
 ```
-./che.sh --run
+./run.sh
 ```
 
 ## Create agent sample:
@@ -115,10 +115,10 @@ mvn archetype:generate                                                      \
 ### Build
 Go to agent-sample folder and run 
 ```
-./che.sh --build
+./build.sh
 ```
 
 ### Run
 ```
-./che.sh --run
+./run.sh
 ```
