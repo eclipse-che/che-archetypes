@@ -23,9 +23,6 @@
     <packaging>maven-archetype</packaging>
     <name>che-agent-archetype</name>
     <description>Contains sample Agent, that outputs 'Hello, Agent!' on workspace startup</description>
-    <properties>
-        <che.version>5.3.0-SNAPSHOT</che.version>
-    </properties>
     <build>
         <extensions>
             <extension>
@@ -84,8 +81,7 @@
                                 <artifactItem>
                                     <groupId>org.eclipse.che.archetype</groupId>
                                     <artifactId>che-archetype-resources</artifactId>
-                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources
-                                    </outputDirectory>
+                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
@@ -102,7 +98,7 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <replace dir="${basedir}/target" token="@che.version@" value ="${che.version}"></replace>
+                                <replace dir="${basedir}/target" token="$${cheVersion}" value="${che.version}" />
                             </tasks>
                         </configuration>
                     </execution>
