@@ -152,3 +152,9 @@ Go to agent-sample folder and run
 ```
 ./stop.sh
 ```
+
+## Update Assembly to new versions of Che
+In order to update Che to a newer version, you must change following values:
+
+- version of the parent POM
+- property `che.version`
