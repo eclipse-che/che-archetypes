@@ -24,9 +24,12 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>codenvy.sh</include>
-        <include>.gitignore</include>
+        <include>build.include</include>
+        <include>build.sh</include>
+        <include>codenvy-run.sh</include>
+        <include>codenvy-stop.sh</include>
         <include>LICENSE</include>
+        <include>.mvn/*</include>
       </includes>
     </fileSet>
   </fileSets>

@@ -22,8 +22,8 @@
             <includes>
                 <include>build.include</include>
                 <include>build.sh</include>
-                <include>run.sh</include>
-                <include>stop.sh</include>
+                <include>che-run.sh</include>
+                <include>che-stop.sh</include>
                 <include>LICENSE</include>
                 <include>.mvn/*</include>
             </includes>
