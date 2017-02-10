@@ -28,7 +28,7 @@
             <outputDirectory>webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>${package}:assembly-ide-war</include>
+                <include>${groupId}:assembly-ide-war</include>
             </includes>
         </dependencySet>
     </dependencySets>

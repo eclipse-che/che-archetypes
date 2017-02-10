@@ -28,7 +28,7 @@
             <outputDirectory>webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>${package}:assembly-wsagent-war</include>
+                <include>${groupId}:assembly-wsagent-war</include>
             </includes>
         </dependencySet>
     </dependencySets>
