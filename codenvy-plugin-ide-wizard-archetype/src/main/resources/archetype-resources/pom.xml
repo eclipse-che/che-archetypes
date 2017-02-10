@@ -32,8 +32,8 @@
         </license>
     </licenses>
     <properties>
-        <che.version>5.3.0-SNAPSHOT</che.version>
-        <codenvy.version>5.3.0-SNAPSHOT</codenvy.version>
+        <che.version>${cheVersion}</che.version>
+        <codenvy.version>${codenvyVersion}</codenvy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
