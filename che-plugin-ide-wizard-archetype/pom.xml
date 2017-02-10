@@ -81,10 +81,25 @@
                                 <artifactItem>
                                     <groupId>org.eclipse.che.archetype</groupId>
                                     <artifactId>che-archetype-resources</artifactId>
-                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources
-                                    </outputDirectory>
+                                    <outputDirectory>${project.build.outputDirectory}/archetype-resources</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <replace dir="${project.build.outputDirectory}/archetype-resources" token="$${cheVersion}" value="${che.version}" />
+                            </tasks>
                         </configuration>
                     </execution>
                 </executions>
