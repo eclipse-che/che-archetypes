@@ -8,12 +8,14 @@ Codenvy is a version of Eclipse Che that adds multi-tenancy, user authentication
 
 ## Use Generator
 There are three phases:
+
 1. Generate a new custom assembly repository
 2. Build it with maven
 3. Run it with the Che CLI
 
 #### Generate Assembly
 A custom assembly is a complete Eclipse Che binary. You can configure the following as part of the generation:
+
 1. The archetype name chooses what customizations will be included.
 2. The archetypeVersion will generate a Che assembly that inherits from a matching Che version.
 3. Set the `groupId` and `artifactId` to unique values to create a UUID identifier of your new assembly.
