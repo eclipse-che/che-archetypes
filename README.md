@@ -62,6 +62,7 @@ mvn clean install
 | `che-agent-archetype` |  contains sample Agent, that outputs 'Hello, Agent!' on workspace startup (Note: currently not working on Windows)  |
 | `che-plugin-ide-menu-archetype` |  contains sample menu entry with 'Say hello' action that pops up a notification                     |
 | `che-plugin-ide-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files                      |
+| `codenvy-plugin-ide-wizard-archetype` |  Same as previous, but based on Codenvy packaging                   |
 
 
 
