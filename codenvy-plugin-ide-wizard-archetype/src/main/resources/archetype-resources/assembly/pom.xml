@@ -20,5 +20,5 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che Wizard Sample :: Assembly Parent</name>
+    <name>Codenvy Wizard Sample :: Assembly Parent</name>
 </project>

@@ -21,7 +21,7 @@
     </parent>
     <artifactId>plugin-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Che Wizard Sample :: Plugins ::  Parent</name>
+    <name>Codenvy Wizard Sample :: Plugins ::  Parent</name>
     <modules>
         <module>${rootArtifactId}</module>
     </modules>

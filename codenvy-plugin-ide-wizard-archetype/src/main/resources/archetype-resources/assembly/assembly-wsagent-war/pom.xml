@@ -20,7 +20,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Che Wizard Sample :: Che Workspace Agent War Packaging</name>
+    <name>Codenvy Wizard Sample :: Che Workspace Agent War Packaging</name>
     <dependencies>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>

@@ -19,7 +19,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che Wizard Sample :: Assemblies Tomcat</name>
+    <name>Codenvy Wizard Sample :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>

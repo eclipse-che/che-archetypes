@@ -19,7 +19,7 @@
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
-    <name>Che Wizard Sample :: Plugin Wizard :: Server</name>
+    <name>Codenvy Wizard Sample :: Plugin Wizard :: Server</name>
     <properties>
         <findbugs.failonerror>false</findbugs.failonerror>
     </properties>

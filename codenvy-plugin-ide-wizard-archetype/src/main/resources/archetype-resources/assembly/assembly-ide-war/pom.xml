@@ -20,7 +20,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Che Wizard Sample :: Compiling GWT Application</name>
+    <name>Codenvy Wizard Sample :: Compiling GWT Application</name>
     <properties>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

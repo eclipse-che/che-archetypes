@@ -20,7 +20,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che Wizard Sample :: Che Assembly Workspace Agent Server</name>
+    <name>Codenvy Wizard Sample :: Che Assembly Workspace Agent Server</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>

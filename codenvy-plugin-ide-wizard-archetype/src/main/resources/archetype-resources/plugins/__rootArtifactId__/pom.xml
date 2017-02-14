@@ -20,7 +20,7 @@
     </parent>
     <artifactId>plugin-wizard-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Che Wizard Sample :: Plugin Wizard :: Parent</name>
+    <name>Codenvy Wizard Sample :: Plugin Wizard :: Parent</name>
     <modules>
         <module>${rootArtifactId}-shared</module>
         <module>${rootArtifactId}-server</module>

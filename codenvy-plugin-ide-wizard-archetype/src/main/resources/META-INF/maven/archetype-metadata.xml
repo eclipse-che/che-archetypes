@@ -16,12 +16,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <fileSets>
     <fileSet encoding="UTF-8">
-      <directory>.mvn</directory>
-      <includes>
-        <include>**/*.config</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
         <include>build.include</include>
