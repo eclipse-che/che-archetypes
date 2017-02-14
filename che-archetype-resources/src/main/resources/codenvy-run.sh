@@ -17,5 +17,5 @@ init "$@"
 docker_exec run -it --rm  ${DOCKER_RUN_OPTIONS}  \
          -v /var/run/docker.sock:/var/run/docker.sock \
          -v "$HOME/.codenvy/sample/data:/data" \
-         -v "$PWD"/assembly/assembly-main/target/codenvy-onpremises-0.1-SNAPSHOT/codenvy-onpremises-0.1-SNAPSHOT:/assembly \
-         codenvy/cli:nightly start
+         -v "$PWD":/repo \
+         codenvy/cli:nightly start --skip:scripts
