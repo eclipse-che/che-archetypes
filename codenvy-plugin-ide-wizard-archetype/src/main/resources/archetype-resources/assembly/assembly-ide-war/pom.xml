@@ -198,6 +198,7 @@
                             <artifactId>assembly-ide-war</artifactId>
                             <type>war</type>
                             <includes>
+                                <include>_app/browserNotSupported.js</include>
                                 <include>_app/activity.js</include>
                                 <include>META-INF/context.xml</include>
                                 <include>WEB-INF/rewrite.config</include>
