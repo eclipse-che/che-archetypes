@@ -48,12 +48,18 @@ mvn clean install
 #### Run Assembly
 ```
 # Run this Che assembly
-./run.sh
+./che-run.sh
+
+# Run this Codenvy assembly
+./codenvy-run.sh
 ```
 #### Stop Assembly
 ```
 # Stop Che
-./stop.sh
+./che-stop.sh
+
+# Stop Codenvy
+./codenvy-stop.sh
 ```
 
 #### Archetype List
@@ -65,10 +71,9 @@ mvn clean install
 | `codenvy-plugin-ide-wizard-archetype` |  Same as previous, but based on Codenvy packaging                   |
 
 
+## Che Samples:
 
-## Create Menu Sample, including custom menu entry with 'Say Hello' action :
-
-### Create sample
+#### Create Menu Sample, including custom menu entry with 'Say Hello' action :
 ```
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
@@ -80,25 +85,7 @@ mvn archetype:generate                                                      \
   -Dversion=0.1-SNAPSHOT
 ```
 
-### Build
-Go to menu-sample and run 
-```
-./build.sh
-```
-
-### Run
-```
-./run.sh
-```
-
-### Stop
-```
-./stop.sh
-```
-
-## Create Wizard Sample, including custom project type and custom file creation action:
-
-### Create sample
+#### Create Wizard Sample, including custom project type and custom file creation action:
 ```
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
@@ -110,23 +97,7 @@ mvn archetype:generate                                                      \
   -Dversion=0.1-SNAPSHOT                            
 ```
 
-### Build
-Go to wizard-sample and run 
-```
-./build.sh
-```
-
-### Run
-```
-./run.sh
-```
-
-### Stop
-```
-./stop.sh
-```
-
-## Create agent sample:
+#### Create Agent Sample, inlcuding simple agent that outputs 'Hello Agent' on workspace startup:
 
 ```
 mvn archetype:generate                                                      \
@@ -138,26 +109,23 @@ mvn archetype:generate                                                      \
   -DartifactId=agent-sample                                                 \
   -Dversion=0.1-SNAPSHOT  
 ```
+## Codenvy Samples:
 
-
-### Build
-Go to agent-sample folder and run 
+#### Create Wizard Sample, including custom project type and custom file creation action:
 ```
-./build.sh
-```
-
-### Run
-```
-./run.sh
-```
-
-### Stop
-```
-./stop.sh
+mvn archetype:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=com.codenvy.archetype                                  \
+  -DarchetypeArtifactId=codenvy-plugin-ide-wizard-archetype                 \
+  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DgroupId=my.plugin                                                       \
+  -DartifactId=codenvy-wizard-sample                                        \
+  -Dversion=0.1-SNAPSHOT                            
 ```
 
-## Update Assembly to new versions of Che
+## Update Assembly to new versions of Che/Codenvy
 In order to update Che to a newer version, you must change following values:
 
 - version of the parent POM
 - property `che.version`
+- property `codenvy.version` (for Codenvy archetypes)
