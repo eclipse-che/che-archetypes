@@ -28,7 +28,8 @@ mvn archetype:generate                                                      \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=<VALUE>                                                         \
   -DartifactId=<VALUE>                                                      \
-  -Dversion=<VALUE>
+  -Dversion=<VALUE>                                                         \
+  -DinteractiveMode=false
 ```
 
 This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, `run.sh` and `stop.sh` scripts to simplfy compiling and running the new install.
@@ -82,7 +83,8 @@ mvn archetype:generate                                                      \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=menu-sample                                                  \
-  -Dversion=0.1-SNAPSHOT
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DinteractiveMode=false
 ```
 
 #### Create Wizard Sample, including custom project type and custom file creation action:
@@ -94,7 +96,8 @@ mvn archetype:generate                                                      \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=wizard-sample                                                \
-  -Dversion=0.1-SNAPSHOT                            
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DinteractiveMode=false                            
 ```
 
 #### Create Agent Sample, inlcuding simple agent that outputs 'Hello Agent' on workspace startup:
@@ -107,7 +110,8 @@ mvn archetype:generate                                                      \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=my.agent                                                        \
   -DartifactId=agent-sample                                                 \
-  -Dversion=0.1-SNAPSHOT  
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DinteractiveMode=false  
 ```
 ## Codenvy Samples:
 
@@ -120,7 +124,8 @@ mvn archetype:generate                                                      \
   -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=codenvy-wizard-sample                                        \
-  -Dversion=0.1-SNAPSHOT                            
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DinteractiveMode=false                            
 ```
 
 ## Update Assembly to new versions of Che/Codenvy
