@@ -38,6 +38,12 @@
         <module>codenvy-plugin-ide-wizard-archetype</module>
         <module>che-agent-archetype</module>
     </modules>
+    <scm>
+        <connection>scm:git:git@github.com:eclipse/che-archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:eclipse/che-archetypes.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/eclipse/che-archetypes</url>
+    </scm>
     <properties>
         <che.version>5.3.0</che.version>
         <codenvy.version>5.3.0</codenvy.version>
