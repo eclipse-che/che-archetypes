@@ -15,8 +15,8 @@
         <groupId>${groupId}</groupId>
         <version>${version}</version>
     </parent>
-    <artifactId>plugin-wizard-server</artifactId>
-    <name>Che Wizard Sample :: Plugin Wizard :: Server</name>
+    <artifactId>${artifactId}</artifactId>
+    <name>Plugin Wizard :: Plugin :: Server</name>
     <properties>
         <findbugs.failonerror>false</findbugs.failonerror>
     </properties>
