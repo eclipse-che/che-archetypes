@@ -34,7 +34,7 @@
     <modules>
         <module>che-archetype-resources</module>
         <module>che-plugin-ide-menu-archetype</module>
-        <module>che-plugin-ide-wizard-archetype</module>
+        <module>plugin-wizard-archetype</module>
         <module>codenvy-plugin-ide-wizard-archetype</module>
         <module>che-agent-archetype</module>
     </modules>
