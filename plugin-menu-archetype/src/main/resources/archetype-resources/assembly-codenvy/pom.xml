@@ -18,5 +18,5 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che Menu Sample :: Assembly Parent</name>
+    <name>Plugin Menu :: Codenvy Assembly :: Assembly Parent</name>
 </project>

@@ -7,20 +7,19 @@
     which accompanies this distribution, and is available at
     http://www.eclipse.org/legal/epl-v10.html
 
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>plugin-wizard-assembly-parent</artifactId>
-        <groupId>${groupId}</groupId>
+        <artifactId>che-agent-archetype-assembly-parent</artifactId>
+        <groupId>${groupId}.codenvy</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che Menu Sample :: Assemblies Tomcat</name>
+    <name>Plugin Wizard :: Codenvy Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${groupId}.codenvy</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>
@@ -43,7 +42,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <updateOnly>false</updateOnly>
                     <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
-                    <finalName>eclipse-che-${project.version}</finalName>
+                    <finalName>codenvy-onpremises-${project.version}</finalName>
                     <tarLongFileMode>posix</tarLongFileMode>
                 </configuration>
             </plugin>
@@ -60,12 +59,12 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.eclipse.che</groupId>
+                                    <groupId>com.codenvy.onpremises</groupId>
                                     <artifactId>assembly-main</artifactId>
-                                    <version>${che.version}</version>
+                                    <version>${codenvy.version}</version>
                                     <type>zip</type>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/dependency</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/dependency/codenvy-onpremises-${codenvy.version}</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>

@@ -22,8 +22,8 @@
             <includes>
                 <include>build.include</include>
                 <include>build.sh</include>
-                <include>che-run.sh</include>
-                <include>che-stop.sh</include>
+                <include>run.sh</include>
+                <include>stop.sh</include>
                 <include>LICENSE</include>
                 <include>.mvn/*</include>
             </includes>
@@ -52,7 +52,31 @@
                 </module>
             </modules>
         </module>
-        <module id="che-assembly-parent" dir="assembly" name="che-assembly-parent">
+        <module id="che-assembly-parent" dir="assembly-che" name="che-assembly-parent">
+            <modules>
+                <module id="assembly-wsmaster-war" dir="assembly-wsmaster-war" name="assembly-wsmaster-war">
+                    <fileSets>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/assembly</directory>
+                            <includes>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+                <module id="assembly-main" dir="assembly-main" name="assembly-main">
+                    <fileSets>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/assembly</directory>
+                            <includes>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+            </modules>
+        </module>
+        <module id="codenvy-assembly-parent" dir="assembly-codenvy" name="che-assembly-parent">
             <modules>
                 <module id="assembly-wsmaster-war" dir="assembly-wsmaster-war" name="assembly-wsmaster-war">
                     <fileSets>

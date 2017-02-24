@@ -29,15 +29,6 @@
                 <include>${groupId}.codenvy:assembly-ide-war</include>
             </includes>
         </dependencySet>
-        <dependencySet>
-            <useProjectArtifact>false</useProjectArtifact>
-            <unpack>false</unpack>
-            <outputDirectory>lib</outputDirectory>
-            <outputFileNameMapping>ws-agent.tar.gz</outputFileNameMapping>
-            <includes>
-                <include>${groupId}.codenvy:assembly-wsagent-server</include>
-            </includes>
-        </dependencySet>
     </dependencySets>
 
     <fileSets>

@@ -13,9 +13,7 @@ set -u
 . ./build.include
 init "$@"
 
-locate_assembly_folder
-
-USAGE="Specify assembly to run (--che or --codenvy)"
+USAGE="Specify assembly-che to run (--che or --codenvy)"
 
 if [ $# = 0 ]; then
     echo $USAGE
@@ -35,9 +33,7 @@ case $1 in
                    exit 1
 esac
 
-echo $CLI_IMAGE
-
-#TODO detect version of assembly. detect version of che
+#TODO detect version of assembly-che. detect version of che
 docker_exec run -it --rm  ${DOCKER_RUN_OPTIONS}  \
          -v /var/run/docker.sock:/var/run/docker.sock \
          -v "$DATA_MOUNT:/data" \
