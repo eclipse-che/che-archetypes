@@ -8,21 +8,19 @@
     http://www.eclipse.org/legal/epl-v10.html
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-assembly-parent</artifactId>
-        <groupId>${groupId}</groupId>
+        <artifactId>agent-archetype-assembly-parent</artifactId>
+        <groupId>${groupId}.codenvy</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Che IDE :: Compiling WS Master WAR</name>
+    <name>Agent :: Codenvy Assembly :: Workspace Agent War Packaging</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
+            <groupId>com.codenvy.onpremises</groupId>
             <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>
@@ -55,18 +53,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <overlays>
-                        <overlay>
-                            <groupId>org.eclipse.che</groupId>
-                            <artifactId>assembly-wsmaster-war</artifactId>
-                            <type>war</type>
-                            <includes>
-                                <include>**/**</include>
-                                <include>META-INF/context.xml</include>
-                                <include>META-INF/web.xml</include>
-                            </includes>
-                        </overlay>
-                    </overlays>
+                    <packagingExcludes>WEB-INF/lib/*gwt*.jar,
+                        WEB-INF/lib/gin-*.jar</packagingExcludes>
                 </configuration>
             </plugin>
         </plugins>

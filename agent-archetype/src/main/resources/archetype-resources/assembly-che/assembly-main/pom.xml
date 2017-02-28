@@ -12,8 +12,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>che-assembly-parent</artifactId>
-        <groupId>${groupId}</groupId>
+        <artifactId>agent-archetype-assembly-parent</artifactId>
+        <groupId>${groupId}.che</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
@@ -21,12 +21,7 @@
     <name>Che IDE :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
-            <artifactId>assembly-main</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${groupId}.che</groupId>
             <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>

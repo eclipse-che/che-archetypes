@@ -19,9 +19,9 @@
         <version>5.4.0-SNAPSHOT</version>
     </parent>
     <groupId>org.eclipse.che.archetype</groupId>
-    <artifactId>che-agent-archetype</artifactId>
+    <artifactId>agent-archetype</artifactId>
     <packaging>maven-archetype</packaging>
-    <name>che-agent-archetype</name>
+    <name>agent-archetype</name>
     <description>Contains sample Agent, that outputs 'Hello, Agent!' on workspace startup</description>
     <build>
         <extensions>

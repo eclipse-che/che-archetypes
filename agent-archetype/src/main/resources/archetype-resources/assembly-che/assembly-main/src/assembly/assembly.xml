@@ -25,7 +25,7 @@
             <outputDirectory>tomcat/webapps</outputDirectory>
             <outputFileNameMapping>wsmaster.war</outputFileNameMapping>
             <includes>
-                <include>${groupId}:assembly-wsmaster-war</include>
+                <include>${groupId}.che:assembly-wsmaster-war</include>
             </includes>
         </dependencySet>
     </dependencySets>

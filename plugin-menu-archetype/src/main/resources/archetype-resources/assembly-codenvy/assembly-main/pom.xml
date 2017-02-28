@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>plugin-menu-assembly-parent</artifactId>
-        <groupId>${groupId}</groupId>
+        <groupId>${groupId}.codenvy</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
@@ -20,7 +20,7 @@
     <name>Plugin Menu :: Codenvy Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${groupId}.codenvy</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>

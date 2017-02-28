@@ -31,53 +31,64 @@
     </licenses>
     <properties>
         <che.version>${cheVersion}</che.version>
+        <codenvy.version>${codenvyVersion}</codenvy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.eclipse.che</groupId>
-                <artifactId>assembly-main</artifactId>
-                <type>zip</type>
-                <version>${che.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.che</groupId>
-                <artifactId>assembly-wsmaster-war</artifactId>
-                <type>war</type>
-                <version>${che.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.che.core</groupId>
-                <artifactId>che-core-api-agent-shared</artifactId>
-                <version>${che.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.che.core</groupId>
-                <artifactId>che-core-commons-inject</artifactId>
-                <version>${che.version}</version>
-            </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
                 <artifactId>sample-agent</artifactId>
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${groupId}.che</groupId>
                 <artifactId>assembly-main</artifactId>
                 <type>tar.gz</type>
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${groupId}.che</groupId>
                 <artifactId>assembly-main</artifactId>
                 <type>zip</type>
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}</groupId>
+                <groupId>${groupId}.che</groupId>
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <type>war</type>
                 <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}.codenvy</groupId>
+                <artifactId>assembly-main</artifactId>
+                <type>tar.gz</type>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}.codenvy</groupId>
+                <artifactId>assembly-main</artifactId>
+                <type>zip</type>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}.codenvy</groupId>
+                <artifactId>assembly-wsmaster-war</artifactId>
+                <type>war</type>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.che</groupId>
+                <artifactId>che-parent</artifactId>
+                <version>${che.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.codenvy.onpremises</groupId>
+                <artifactId>onpremises-assembly-parent</artifactId>
+                <version>${codenvy.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -16,6 +16,7 @@
         <version>${version}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <groupId>${groupId}.che</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <name>Che IDE :: Parent</name>

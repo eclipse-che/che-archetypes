@@ -16,6 +16,7 @@
         <version>${version}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+    <groupId>${groupId}.codenvy</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <name>Plugin Menu :: Codenvy Assembly :: Assembly Parent</name>
