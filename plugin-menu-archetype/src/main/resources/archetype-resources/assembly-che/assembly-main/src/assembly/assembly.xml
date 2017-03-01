@@ -18,34 +18,24 @@
         <format>zip</format>
         <format>tar.gz</format>
     </formats>
-    <includeBaseDirectory>false</includeBaseDirectory>
     <dependencySets>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
-            <outputDirectory>webapps</outputDirectory>
+            <outputDirectory>tomcat/webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>${groupId}.codenvy:assembly-ide-war</include>
-            </includes>
-        </dependencySet>
-        <dependencySet>
-            <useProjectArtifact>false</useProjectArtifact>
-            <unpack>false</unpack>
-            <outputDirectory>lib</outputDirectory>
-            <outputFileNameMapping>ws-agent.tar.gz</outputFileNameMapping>
-            <includes>
-                <include>${groupId}.codenvy:assembly-wsagent-server</include>
+                <include>${groupId}.che:assembly-ide-war</include>
             </includes>
         </dependencySet>
     </dependencySets>
 
     <fileSets>
         <fileSet>
-            <directory>${symbol_dollar}{project.build.directory}/dependency/codenvy-onpremises-${symbol_dollar}{codenvy.version}</directory>
+            <directory>${symbol_dollar}{project.build.directory}/dependency/eclipse-che-${symbol_dollar}{che.version}</directory>
             <outputDirectory></outputDirectory>
             <excludes>
-                <exclude>**/webapps/ROOT.war</exclude>
+                <exclude>**/tomcat/webapps/ROOT.war</exclude>
             </excludes>
         </fileSet>
     </fileSets>

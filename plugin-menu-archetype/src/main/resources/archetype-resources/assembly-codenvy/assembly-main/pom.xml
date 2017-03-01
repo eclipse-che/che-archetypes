@@ -7,26 +7,22 @@
     which accompanies this distribution, and is available at
     http://www.eclipse.org/legal/epl-v10.html
 
---><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>plugin-wizard-assembly-parent</artifactId>
+        <artifactId>plugin-menu-assembly-parent</artifactId>
         <groupId>${groupId}.codenvy</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Codenvy Assembly :: Assemblies Tomcat</name>
+    <name>Plugin Menu :: Codenvy Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}.codenvy</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>${groupId}.codenvy</groupId>
-            <artifactId>assembly-wsagent-server</artifactId>
-            <type>tar.gz</type>
         </dependency>
     </dependencies>
     <build>

@@ -34,7 +34,7 @@ mvn archetype:generate                                                      \
 
 This generates a custom assembly in XXX. This assembly is git-repo check-in ready and includes a `.gitignore`, `build.sh`, `run.sh` and `stop.sh` scripts to simplfy compiling and running the new install.
 
-#### Build Assembly
+#### Build Assemblies
 ```
 # Go into your new assembly
 cd <ARTIFACTID>
@@ -49,27 +49,26 @@ mvn clean install
 #### Run Assembly
 ```
 # Run this Che assembly
-./che-run.sh
+./run.sh --che
 
 # Run this Codenvy assembly
-./codenvy-run.sh
+./run.sh --codenvy
 ```
 #### Stop Assembly
 ```
 # Stop Che
-./che-stop.sh
+./stop.sh --che
 
 # Stop Codenvy
-./codenvy-stop.sh
+./stop.sh --codenvy
 ```
 
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
 |-----------------------|-------------------------------------------|
-| `che-agent-archetype` |  contains sample Agent, that outputs 'Hello, Agent!' on workspace startup (Note: currently not working on Windows)  |
-| `che-plugin-ide-menu-archetype` |  contains sample menu entry with 'Say hello' action that pops up a notification                     |
-| `che-plugin-ide-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files                      |
-| `codenvy-plugin-ide-wizard-archetype` |  Same as previous, but based on Codenvy packaging                   |
+| `agent-archetype` |  contains sample Agent, that outputs 'Hello, Agent!' on workspace startup (Note: currently not working on Windows)  |
+| `plugin-menu-archetype` |  contains sample menu entry with 'Say hello' action that pops up a notification                     |
+| `plugin-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files                      |
 
 
 ## Che Samples:
@@ -79,8 +78,8 @@ mvn clean install
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=che-plugin-ide-menu-archetype                       \
-  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DarchetypeArtifactId=plugin-menu-archetype                               \
+  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=menu-sample                                                  \
   -Dversion=0.1-SNAPSHOT                                                    \
@@ -92,12 +91,12 @@ mvn archetype:generate                                                      \
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=che-plugin-ide-wizard-archetype                     \
-  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DarchetypeArtifactId=plugin-wizard-archetype                             \
+  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=wizard-sample                                                \
   -Dversion=0.1-SNAPSHOT                                                    \
-  -DinteractiveMode=false                            
+  -DinteractiveMode=false
 ```
 
 #### Create Agent Sample, inlcuding simple agent that outputs 'Hello Agent' on workspace startup:
@@ -106,26 +105,12 @@ mvn archetype:generate                                                      \
 mvn archetype:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=che-agent-archetype                                 \
-  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DgroupId=my.agent                                                        \
+  -DarchetypeArtifactId=agent-archetype                                     \
+  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
+  -DgroupId=my.plugin                                                       \
   -DartifactId=agent-sample                                                 \
   -Dversion=0.1-SNAPSHOT                                                    \
-  -DinteractiveMode=false  
-```
-## Codenvy Samples:
-
-#### Create Wizard Sample, including custom project type and custom file creation action:
-```
-mvn archetype:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=com.codenvy.archetype                                  \
-  -DarchetypeArtifactId=codenvy-plugin-ide-wizard-archetype                 \
-  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=codenvy-wizard-sample                                        \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DinteractiveMode=false                            
+  -DinteractiveMode=false
 ```
 
 ## Update Assembly to new versions of Che/Codenvy
