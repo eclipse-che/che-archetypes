@@ -24,9 +24,9 @@
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
             <outputDirectory>webapps</outputDirectory>
-            <outputFileNameMapping>ROOT.war</outputFileNameMapping>
+            <outputFileNameMapping>api.war</outputFileNameMapping>
             <includes>
-                <include>${groupId}.codenvy:assembly-ide-war</include>
+                <include>${groupId}.codenvy:assembly-wsmaster-war</include>
             </includes>
         </dependencySet>
     </dependencySets>
@@ -36,7 +36,7 @@
             <directory>${symbol_dollar}{project.build.directory}/dependency/codenvy-onpremises-${symbol_dollar}{codenvy.version}</directory>
             <outputDirectory></outputDirectory>
             <excludes>
-                <exclude>**/webapps/ROOT.war</exclude>
+                <exclude>**/webapps/api.war</exclude>
             </excludes>
         </fileSet>
     </fileSets>

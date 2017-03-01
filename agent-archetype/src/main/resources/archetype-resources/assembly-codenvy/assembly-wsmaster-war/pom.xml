@@ -53,8 +53,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <packagingExcludes>WEB-INF/lib/*gwt*.jar,
-                        WEB-INF/lib/gin-*.jar</packagingExcludes>
+                    <overlays>
+                        <overlay>
+                            <groupId>org.eclipse.che</groupId>
+                            <artifactId>assembly-wsmaster-war</artifactId>
+                            <type>war</type>
+                            <includes>
+                                <include>**/**</include>
+                                <include>META-INF/context.xml</include>
+                                <include>META-INF/web.xml</include>
+                            </includes>
+                        </overlay>
+                    </overlays>
                 </configuration>
             </plugin>
         </plugins>
