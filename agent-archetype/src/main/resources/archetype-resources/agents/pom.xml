@@ -20,5 +20,5 @@
     </parent>
     <artifactId>che-agents-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Che :: Agents :: Parent</name>
+    <name>Agent :: Agents :: Parent</name>
 </project>

@@ -19,5 +19,5 @@
     <groupId>${groupId}.che</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Che IDE :: Parent</name>
+    <name>Agent :: Che Assembly :: Parent</name>
 </project>

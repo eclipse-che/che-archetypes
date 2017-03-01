@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Agent :: Codenvy Assembly :: Workspace Agent War Packaging</name>
+    <name>Agent :: Codenvy Assembly :: Workspace Master War Packaging</name>
     <dependencies>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
@@ -55,7 +55,7 @@
                 <configuration>
                     <overlays>
                         <overlay>
-                            <groupId>org.eclipse.che</groupId>
+                            <groupId>com.codenvy.onpremises</groupId>
                             <artifactId>assembly-wsmaster-war</artifactId>
                             <type>war</type>
                             <includes>

@@ -20,7 +20,7 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>pom</packaging>
-    <name>Che :: Parent</name>
+    <name>Agent :: Parent</name>
     <url>https://www.eclipse.org/che/</url>
     <licenses>
         <license>
