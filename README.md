@@ -21,14 +21,15 @@ A custom assembly is a complete Eclipse Che binary. You can configure the follow
 3. Set the `groupId` and `artifactId` to unique values to create a UUID identifier of your new assembly.
 
 ```
-mvn archetype:generate                                                      \
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=<ARCHETYPE-NAME>                                    \
-  -DarchetypeVersion=5.3.0-SNAPSHOT                                         \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=<VALUE>                                                         \
   -DartifactId=<VALUE>                                                      \
   -Dversion=<VALUE>                                                         \
+  -DskipITs                                                                 \
   -DinteractiveMode=false
 ```
 
@@ -71,45 +72,48 @@ mvn clean install
 | `plugin-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files                      |
 
 
-## Che Samples:
+## Samples:
 
 #### Create Menu Sample, including custom menu entry with 'Say Hello' action :
 ```
-mvn archetype:generate                                                      \
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=plugin-menu-archetype                               \
-  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=menu-sample                                                  \
   -Dversion=0.1-SNAPSHOT                                                    \
+  -DskipITs                                                                 \
   -DinteractiveMode=false
 ```
 
 #### Create Wizard Sample, including custom project type and custom file creation action:
 ```
-mvn archetype:generate                                                      \
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=plugin-wizard-archetype                             \
-  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=wizard-sample                                                \
   -Dversion=0.1-SNAPSHOT                                                    \
+  -DskipITs                                                                 \
   -DinteractiveMode=false
 ```
 
 #### Create Agent Sample, inlcuding simple agent that outputs 'Hello Agent' on workspace startup:
 
 ```
-mvn archetype:generate                                                      \
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
   -DarchetypeArtifactId=agent-archetype                                     \
-  -DarchetypeVersion=5.4.0-SNAPSHOT                                         \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
   -DartifactId=agent-sample                                                 \
   -Dversion=0.1-SNAPSHOT                                                    \
+  -DskipITs                                                                 \
   -DinteractiveMode=false
 ```
 
