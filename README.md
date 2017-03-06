@@ -123,10 +123,10 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                
 mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-embedjs-archetype                               \
+  -DarchetypeArtifactId=plugin-embedjs-archetype                            \
   -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
-  -DartifactId=embedjs-sample                                                  \
+  -DartifactId=embedjs-sample                                               \
   -Dversion=0.1-SNAPSHOT                                                    \
   -DskipITs                                                                 \
   -DinteractiveMode=false
