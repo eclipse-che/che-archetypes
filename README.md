@@ -117,6 +117,21 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                
   -DinteractiveMode=false
 ```
 
+
+#### Create Embed JavaScript Sample, including custom context menu entry that displays 'Hello World' in IDE via embedded JavaScript function :
+```
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=plugin-embedjs-archetype                            \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
+  -DgroupId=my.plugin                                                       \
+  -DartifactId=embedjs-sample                                               \
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DskipITs                                                                 \
+  -DinteractiveMode=false
+```
+
 ## Update Assembly to new versions of Che/Codenvy
 In order to update Che to a newer version, you must change following values:
 
