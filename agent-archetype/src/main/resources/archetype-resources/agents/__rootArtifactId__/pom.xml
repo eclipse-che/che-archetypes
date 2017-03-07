@@ -18,7 +18,7 @@
         <version>${version}</version>
     </parent>
     <artifactId>sample-agent</artifactId>
-    <name>Agent :: Agents :: Sample</name>
+    <name>Agent Sample :: Agents :: Sample</name>
     <properties>
         <findbugs.failonerror>false</findbugs.failonerror>
     </properties>

@@ -16,7 +16,7 @@
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
-    <name>Plugin Wizard :: Plugin :: Server</name>
+    <name>Wizard Sample :: Plugin :: Server</name>
     <properties>
         <findbugs.failonerror>false</findbugs.failonerror>
     </properties>

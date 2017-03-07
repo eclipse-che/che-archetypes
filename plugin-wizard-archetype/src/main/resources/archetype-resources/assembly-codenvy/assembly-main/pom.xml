@@ -16,7 +16,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Codenvy Assembly :: Assemblies Tomcat</name>
+    <name>Wizard Sample :: Codenvy Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}.codenvy</groupId>

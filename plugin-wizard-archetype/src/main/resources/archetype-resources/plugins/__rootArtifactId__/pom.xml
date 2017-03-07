@@ -20,7 +20,7 @@
     </parent>
     <artifactId>plugin-wizard-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Plugin :: Parent</name>
+    <name>Wizard Sample :: Plugin :: Parent</name>
     <modules>
         <module>${rootArtifactId}-shared</module>
         <module>${rootArtifactId}-server</module>

@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Agent :: Codenvy Assembly :: Workspace Master War Packaging</name>
+    <name>Agent Sample :: Codenvy Assembly :: Workspace Master War Packaging</name>
     <dependencies>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>

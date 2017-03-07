@@ -19,5 +19,5 @@
     <groupId>${groupId}.codenvy</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Agent :: Codenvy Assembly :: Parent</name>
+    <name>Agent Sample :: Codenvy Assembly :: Parent</name>
 </project>

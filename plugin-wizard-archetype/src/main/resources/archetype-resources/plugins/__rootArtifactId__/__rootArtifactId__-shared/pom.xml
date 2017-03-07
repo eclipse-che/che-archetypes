@@ -19,7 +19,7 @@
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
-    <name>Plugin Wizard:: Plugin :: Shared</name>
+    <name>Wizard Sample:: Plugin :: Shared</name>
     <dependencies>
         <dependency>
             <groupId>com.google.gwt</groupId>

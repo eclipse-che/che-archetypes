@@ -18,7 +18,7 @@
     </parent>
     <artifactId>plugin-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Plugins ::  Parent</name>
+    <name>Wizard Sample :: Plugins ::  Parent</name>
     <modules>
         <module>${rootArtifactId}</module>
     </modules>

@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Che Assembly :: Assemblies Tomcat</name>
+    <name>Wizard Sample :: Che Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}.che</groupId>

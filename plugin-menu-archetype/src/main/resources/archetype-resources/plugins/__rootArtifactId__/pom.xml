@@ -18,7 +18,7 @@
     </parent>
     <artifactId>plugin-menu-parent</artifactId>
     <packaging>pom</packaging>
-    <name>Che Menu Sample :: Plugin Menu :: Parent</name>
+    <name>Menu Sample :: Plugin Menu :: Parent</name>
     <modules>
         <module>${rootArtifactId}-ide</module>
     </modules>

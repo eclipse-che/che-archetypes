@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Codenvy Assembly :: Assembly Workspace Agent Server</name>
+    <name>Wizard Sample :: Codenvy Assembly :: Assembly Workspace Agent Server</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}.codenvy</groupId>

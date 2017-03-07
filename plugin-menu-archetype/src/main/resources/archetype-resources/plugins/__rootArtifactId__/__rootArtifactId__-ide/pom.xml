@@ -17,7 +17,7 @@
     </parent>
     <artifactId>plugin-menu-ide</artifactId>
     <packaging>jar</packaging>
-    <name>Che Menu Sample :: Plugin Menu :: IDE</name>
+    <name>Menu Sample :: Plugin Menu :: IDE</name>
     <dependencies>
         <dependency>
             <groupId>com.google.inject</groupId>

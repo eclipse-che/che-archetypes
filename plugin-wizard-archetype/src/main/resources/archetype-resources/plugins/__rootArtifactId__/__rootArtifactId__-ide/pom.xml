@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>jar</packaging>
-    <name>Plugin Wizard:: Plugin :: IDE</name>
+    <name>Wizard Sample:: Plugin :: IDE</name>
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>

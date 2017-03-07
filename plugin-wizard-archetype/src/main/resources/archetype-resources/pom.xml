@@ -19,7 +19,7 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>pom</packaging>
-    <name>Codenvy Wizard Sample :: Parent pom</name>
+    <name>Wizard Sample :: Parent pom</name>
     <url>https://www.eclipse.org/che/</url>
     <licenses>
         <license>

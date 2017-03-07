@@ -19,5 +19,5 @@
     <groupId>${groupId}.che</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Wizard :: Che Assembly :: Assembly Parent</name>
+    <name>Wizard Sample :: Che Assembly :: Assembly Parent</name>
 </project>
