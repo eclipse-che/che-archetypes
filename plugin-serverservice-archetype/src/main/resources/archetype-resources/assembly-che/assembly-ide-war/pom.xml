@@ -55,6 +55,20 @@
             </plugin>
             <!-- Source Generator invocation -->
             <plugin>
+                <execution>
+                    <id>gwt-xml</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>org.eclipse.che.util.GwtXmlGenerator</mainClass>
+                        <arguments>
+                            <argument>--rootDir=${generated.sources.directory}</argument>
+                            <argument>--loggingEnabled=${gwt.log.enable}</argument>
+                        </arguments>
+                    </configuration>
+                </execution>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <executions>

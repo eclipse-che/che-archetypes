@@ -61,6 +61,22 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>gwt-xml</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <classpathScope>compile</classpathScope>
+                            <mainClass>org.eclipse.che.util.GwtXmlGenerator</mainClass>
+                            <arguments>
+                                <argument>--rootDir=${generated.sources.directory}</argument>
+                                <argument>--loggingEnabled=${gwt.log.enable}</argument>
+                                <argument>--gwtFileName=com/codenvy/ide/IDE.gwt.xml</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>extManager-client</id>
                         <phase>generate-sources</phase>
                         <goals>
