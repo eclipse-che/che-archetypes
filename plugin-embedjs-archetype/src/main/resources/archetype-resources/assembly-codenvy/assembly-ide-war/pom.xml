@@ -19,6 +19,7 @@
     <packaging>war</packaging>
     <name>Plugin Embed JavaScript :: Codenvy Assembly :: Compiling GWT Application</name>
     <properties>
+        <gwt.log.enable>false</gwt.log.enable>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
