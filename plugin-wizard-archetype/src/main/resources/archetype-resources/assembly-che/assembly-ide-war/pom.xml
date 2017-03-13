@@ -74,6 +74,7 @@
                             <arguments>
                                 <argument>--rootDir=${generated.sources.directory}</argument>
                                 <argument>--loggingEnabled=${gwt.log.enable}</argument>
+                                <argument>--gwtFileName=${packageInPathFormat}/ide/IDE.gwt.xml</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -167,7 +168,7 @@
                     <gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath>
                     <extraJvmArgs>${gwt.compiler.extraJvmArgs}</extraJvmArgs>
                     <modules>
-                        <module>${package}.IDE</module>
+                        <module>${package}.ide.IDE</module>
                     </modules>
                     <!-- don' remove it we will use it then need to found bug in compiled JS -->
                     <!--style>DETAILED</style-->
