@@ -19,6 +19,7 @@
     <packaging>war</packaging>
     <name>Menu Sample :: Codenvy Assembly :: Compiling GWT Application</name>
     <properties>
+        <gwt.log.enable>false</gwt.log.enable>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -60,6 +61,22 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <executions>
+                    <execution>
+                        <id>gwt-xml</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <classpathScope>compile</classpathScope>
+                            <mainClass>org.eclipse.che.util.GwtXmlGenerator</mainClass>
+                            <arguments>
+                                <argument>--rootDir=${generated.sources.directory}</argument>
+                                <argument>--loggingEnabled=${gwt.log.enable}</argument>
+                                <argument>--gwtFileName=com/codenvy/ide/IDE.gwt.xml</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>extManager-client</id>
                         <phase>generate-sources</phase>
