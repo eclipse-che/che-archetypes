@@ -139,10 +139,24 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                
 mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
   -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-embedjs-archetype                            \
+  -DarchetypeArtifactId=plugin-serverservice-archetype                      \
   -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
   -DgroupId=my.plugin                                                       \
-  -DartifactId=embedjs-sample                                               \
+  -DartifactId=serverservice-sample                                         \
+  -Dversion=0.1-SNAPSHOT                                                    \
+  -DskipITs                                                                 \
+  -DinteractiveMode=false
+```
+
+#### Create JSON Sample, including custom project type, codeassistant, actions and sample workspace services :
+```
+mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
+  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
+  -DarchetypeGroupId=org.eclipse.che.archetype                              \
+  -DarchetypeArtifactId=plugin-json-archetype                               \
+  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
+  -DgroupId=my.plugin                                                       \
+  -DartifactId=json-sample                                                  \
   -Dversion=0.1-SNAPSHOT                                                    \
   -DskipITs                                                                 \
   -DinteractiveMode=false
