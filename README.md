@@ -67,6 +67,7 @@ mvn clean install
 #### Archetype List
 | archetypeArtifactId   | Descriptions                              |
 |-----------------------|-------------------------------------------|
+|================================= | |
 | `agent-archetype` |  contains sample Agent, that outputs 'Hello, Agent!' on workspace startup (Note: currently not working on Windows)  |
 | `plugin-menu-archetype` |  contains sample menu entry with 'Say hello' action that pops up a notification  |
 | `plugin-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files  |
@@ -74,9 +75,8 @@ mvn clean install
 | `plugin-serverservice-archetype` |  contains custom context menu entry that displays message, received from the sample server service  |
 
 
-## Samples:
-
-#### Create Menu Sample, including custom menu entry with 'Say Hello' action :
+## Sample
+Create a custom assembly with a custom menu and 'Say Hello' action:
 ```
 mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
   -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
@@ -90,80 +90,8 @@ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                
   -DinteractiveMode=false
 ```
 
-#### Create Wizard Sample, including custom project type and custom file creation action:
-```
-mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-wizard-archetype                             \
-  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=wizard-sample                                                \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DskipITs                                                                 \
-  -DinteractiveMode=false
-```
-
-#### Create Agent Sample, inlcuding simple agent that outputs 'Hello Agent' on workspace startup:
-
-```
-mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=agent-archetype                                     \
-  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=agent-sample                                                 \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DskipITs                                                                 \
-  -DinteractiveMode=false
-```
-
-
-#### Create Embed JavaScript Sample, including custom context menu entry that displays 'Hello World' in IDE via embedded JavaScript function :
-```
-mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-embedjs-archetype                            \
-  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=embedjs-sample                                               \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DskipITs                                                                 \
-  -DinteractiveMode=false
-```
-
-#### Create ServerService Sample, including custom context menu entry that displays message, received from the sample server service :
-```
-mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-serverservice-archetype                      \
-  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=serverservice-sample                                         \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DskipITs                                                                 \
-  -DinteractiveMode=false
-```
-
-#### Create JSON Sample, including custom project type, codeassistant, actions and sample workspace services :
-```
-mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate                                                      \
-  -DarchetypeRepository=http://maven.codenvycorp.com/content/groups/public/ \
-  -DarchetypeGroupId=org.eclipse.che.archetype                              \
-  -DarchetypeArtifactId=plugin-json-archetype                               \
-  -DarchetypeVersion=5.5.0-SNAPSHOT                                         \
-  -DgroupId=my.plugin                                                       \
-  -DartifactId=json-sample                                                  \
-  -Dversion=0.1-SNAPSHOT                                                    \
-  -DskipITs                                                                 \
-  -DinteractiveMode=false
-```
-
-## Update Assembly to new versions of Che/Codenvy
-In order to update Che to a newer version, you must change following values:
+## Update Assembly to New Version of Che/Codenvy
+In the custom assembly that was generated, modify two properties to have the custom assembly inherit from a newer version of Che or Codenvy:
 
 - version of the parent POM
 - property `che.version`
