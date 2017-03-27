@@ -12,16 +12,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>plugin-serverservice-assembly-parent</artifactId>
-        <groupId>${groupId}.che</groupId>
+        <groupId>${groupId}.codenvy</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Plugin ServerService :: Che Assembly :: Workspace Agent War Packaging</name>
+    <name>Plugin ServerService :: Codenvy Assembly :: Workspace Agent War Packaging</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
-            <artifactId>assembly-wsagent-war</artifactId>
+            <groupId>com.codenvy.onpremises</groupId>
+            <artifactId>assembly-wsmaster-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
@@ -47,8 +47,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
-                    <packagingExcludes>WEB-INF/lib/*gwt*.jar,
-                        WEB-INF/lib/gin-*.jar</packagingExcludes>
+                    <overlays>
+                        <overlay>
+                            <groupId>com.codenvy.onpremises</groupId>
+                            <artifactId>assembly-wsmaster-war</artifactId>
+                            <type>war</type>
+                            <includes>
+                                <include>**/**</include>
+                                <include>META-INF/context.xml</include>
+                                <include>META-INF/web.xml</include>
+                            </includes>
+                        </overlay>
+                    </overlays>
                 </configuration>
             </plugin>
         </plugins>
