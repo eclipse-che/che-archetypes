@@ -32,10 +32,10 @@
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
-            <outputDirectory>lib</outputDirectory>
-            <outputFileNameMapping>ws-agent.tar.gz</outputFileNameMapping>
+            <outputDirectory>tomcat/webapps</outputDirectory>
+            <outputFileNameMapping>wsmaster.war</outputFileNameMapping>
             <includes>
-                <include>${groupId}.codenvy:assembly-wsagent-server</include>
+                <include>${groupId}.che:assembly-wsmaster-war</include>
             </includes>
         </dependencySet>
     </dependencySets>
@@ -46,6 +46,7 @@
             <outputDirectory></outputDirectory>
             <excludes>
                 <exclude>**/webapps/ROOT.war</exclude>
+                <exclude>**/tomcat/webapps/wsmaster.war</exclude>
             </excludes>
         </fileSet>
     </fileSets>

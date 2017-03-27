@@ -26,8 +26,8 @@
         </dependency>
         <dependency>
             <groupId>${groupId}.che</groupId>
-            <artifactId>assembly-wsagent-server</artifactId>
-            <type>tar.gz</type>
+            <artifactId>assembly-wsmaster-war</artifactId>
+            <type>war</type>
         </dependency>
     </dependencies>
     <build>
