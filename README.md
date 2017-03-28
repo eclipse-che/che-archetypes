@@ -73,6 +73,7 @@ mvn clean install
 | `plugin-wizard-archetype` |  contains sample project type, based on C language, as well as action to create new .c files  |
 | `plugin-embedjs-archetype` |  contains custom context menu entry that displays 'Hello World' in IDE via embedded JavaScript function  |
 | `plugin-serverservice-archetype` |  contains custom context menu entry that displays message, received from the sample server service  |
+| `plugin-json-archetype` |  contains custom JSON file editor codeassistant, sample agent service and actions  |
 
 
 ## Sample
