@@ -20,8 +20,8 @@
     <name>JSON Sample :: Che Assembly :: Workspace Agent War Packaging</name>
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.che</groupId>
-            <artifactId>assembly-wsagent-war</artifactId>
+            <groupId>org.eclipse.che.core</groupId>
+            <artifactId>che-wsagent-core</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
