@@ -25,8 +25,7 @@
     <dependencies>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
-            <artifactId>compiling-ide-war</artifactId>
-            <classifier>classes</classifier>
+            <artifactId>codenvy-ide-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

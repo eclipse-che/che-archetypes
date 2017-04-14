@@ -20,17 +20,13 @@
     <name>JSON Sample :: Codenvy Assembly :: Workspace Agent War Packaging</name>
     <dependencies>
         <dependency>
-            <groupId>com.codenvy.onpremises</groupId>
-            <artifactId>assembly-wsagent-war</artifactId>
+            <groupId>com.codenvy.onpremises.wsagent</groupId>
+            <artifactId>codenvy-wsagent-core</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>plugin-json-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>plugin-json-shared</artifactId>
         </dependency>
     </dependencies>
     <build>
