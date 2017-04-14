@@ -32,12 +32,12 @@
         </license>
     </licenses>
     <modules>
+        <module>plugin-json-archetype</module>
         <module>che-archetype-resources</module>
         <module>plugin-menu-archetype</module>
         <module>plugin-embedjs-archetype</module>
         <module>plugin-wizard-archetype</module>
         <module>plugin-serverservice-archetype</module>
-        <module>plugin-json-archetype</module>
         <module>agent-archetype</module>
     </modules>
     <scm>
