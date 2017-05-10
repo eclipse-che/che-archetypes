@@ -35,6 +35,7 @@
         <module>che-archetype-resources</module>
         <module>plugin-menu-archetype</module>
         <module>plugin-embedjs-archetype</module>
+        <module>plugin-framedjs-archetype</module>
         <module>plugin-wizard-archetype</module>
         <module>plugin-serverservice-archetype</module>
         <module>plugin-json-archetype</module>
