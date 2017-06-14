@@ -56,31 +56,7 @@
                 </module>
             </modules>
         </module>
-        <module id="plugin-embedjs-assembly-parent" dir="assembly-che" name="plugin-embedjs-assembly-parent">
-            <modules>
-                <module id="assembly-ide-war" dir="assembly-ide-war" name="assembly-ide-war">
-                    <fileSets>
-                        <fileSet filtered="true" encoding="UTF-8">
-                            <directory>src/main/resources</directory>
-                            <includes>
-                                <include>**/*.xml</include>
-                            </includes>
-                        </fileSet>
-                    </fileSets>
-                </module>
-                <module id="assembly-main" dir="assembly-main" name="assembly-main">
-                    <fileSets>
-                        <fileSet filtered="true" encoding="UTF-8">
-                            <directory>src/assembly</directory>
-                            <includes>
-                                <include>**/*.xml</include>
-                            </includes>
-                        </fileSet>
-                    </fileSets>
-                </module>
-            </modules>
-        </module>
-        <module id="plugin-embedjs-assembly-parent" dir="assembly-codenvy" name="plugin-embedjs-assembly-parent">
+        <module id="plugin-embedjs-assembly-parent" dir="assembly" name="plugin-embedjs-assembly-parent">
             <modules>
                 <module id="assembly-ide-war" dir="assembly-ide-war" name="assembly-ide-war">
                     <fileSets>

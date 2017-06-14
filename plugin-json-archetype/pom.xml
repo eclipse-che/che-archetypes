@@ -98,7 +98,6 @@
                         <configuration>
                             <tasks>
                                 <replace dir="${project.build.outputDirectory}/archetype-resources" token="$${cheVersion}" value="${che.version}" />
-                                <replace dir="${project.build.outputDirectory}/archetype-resources" token="$${codenvyVersion}" value="${codenvy.version}" />
                             </tasks>
                         </configuration>
                     </execution>

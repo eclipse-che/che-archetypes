@@ -13,27 +13,12 @@ set -u
 . ./build.include
 init "$@"
 
-USAGE="Specify assembly-che to run (--che or --codenvy)"
+CLI_IMAGE=eclipse/che-cli:nightly
+DATA_MOUNT=$HOME/.che/sample/data
+ASSEMBLY_MOUNT=$PWD/assembly/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT
 
-if [ $# = 0 ]; then
-    echo $USAGE
-    exit 1
-fi
 
-case $1 in
-    --che )        CLI_IMAGE=eclipse/che-cli:nightly
-                   DATA_MOUNT=$HOME/.che/sample/data
-                   ASSEMBLY_MOUNT=$PWD/assembly-che/assembly-main/target/eclipse-che-0.1-SNAPSHOT/eclipse-che-0.1-SNAPSHOT
-                   ;;
-    --codenvy )    CLI_IMAGE=codenvy/cli:nightly
-                   DATA_MOUNT=$HOME/.codenvy/sample/data
-                   ASSEMBLY_MOUNT=$PWD/assembly-codenvy/assembly-main/target/codenvy-onpremises-0.1-SNAPSHOT
-                   ;;
-    * )            echo $USAGE
-                   exit 1
-esac
-
-#TODO detect version of assembly-che. detect version of che
+#TODO detect version of assembly. detect version of che
 docker_exec run -it --rm  ${DOCKER_RUN_OPTIONS}  \
          -v /var/run/docker.sock:/var/run/docker.sock \
          -v "$DATA_MOUNT:/data" \
