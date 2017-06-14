@@ -30,54 +30,29 @@
     </licenses>
     <properties>
         <che.version>${cheVersion}</che.version>
-        <codenvy.version>${codenvyVersion}</codenvy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${groupId}.che</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-ide-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-wsagent-server</artifactId>
                 <version>${project.version}</version>
                 <type>tar.gz</type>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-wsagent-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
-                <artifactId>assembly-wsmaster-war</artifactId>
-                <version>${project.version}</version>
-                <type>war</type>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
-                <artifactId>assembly-ide-war</artifactId>
-                <version>${project.version}</version>
-                <type>war</type>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
-                <artifactId>assembly-wsagent-server</artifactId>
-                <version>${project.version}</version>
-                <type>tar.gz</type>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
-                <artifactId>assembly-wsagent-war</artifactId>
-                <version>${project.version}</version>
-                <type>war</type>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
@@ -101,13 +76,6 @@
                 <groupId>org.eclipse.che</groupId>
                 <artifactId>che-parent</artifactId>
                 <version>${che.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-             <dependency>
-                <groupId>com.codenvy.onpremises</groupId>
-                <artifactId>onpremises-assembly-parent</artifactId>
-                <version>${codenvy.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

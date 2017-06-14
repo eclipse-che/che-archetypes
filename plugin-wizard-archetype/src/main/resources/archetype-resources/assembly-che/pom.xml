@@ -16,7 +16,7 @@
         <version>${version}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>${groupId}.che</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
     <name>Wizard Sample :: Che Assembly :: Assembly Parent</name>

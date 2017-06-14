@@ -48,7 +48,6 @@
     </scm>
     <properties>
         <che.version>5.13.0-SNAPSHOT</che.version>
-        <codenvy.version>5.13.0-SNAPSHOT</codenvy.version>
         <version.archetype.plugin>2.4</version.archetype.plugin>
     </properties>
     <dependencyManagement>
