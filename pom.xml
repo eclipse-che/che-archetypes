@@ -20,7 +20,7 @@
     </parent>
     <groupId>org.eclipse.che.archetype</groupId>
     <artifactId>eclipse-che-archetype-parent</artifactId>
-    <version>5.12.0-SNAPSHOT</version>
+    <version>5.12.0</version>
     <packaging>pom</packaging>
     <name>Che Archetype :: Parent pom</name>
     <url>https://www.eclipse.org/che/</url>
@@ -43,7 +43,7 @@
     <scm>
         <connection>scm:git:git@github.com:eclipse/che-archetypes.git</connection>
         <developerConnection>scm:git:git@github.com:eclipse/che-archetypes.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>5.12.0</tag>
         <url>https://github.com/eclipse/che-archetypes</url>
     </scm>
     <properties>
