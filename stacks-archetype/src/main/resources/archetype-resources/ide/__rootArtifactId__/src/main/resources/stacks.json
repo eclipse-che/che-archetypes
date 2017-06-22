@@ -1,6 +1,6 @@
 [
   {
-    "id": "java-mysql",
+    "id": "custom-java-mysql",
     "creator": "ide",
     "name": "Custom Java-MySQL",
     "description": "Multi-machine environment with Default Java Stack and MySQL database",
