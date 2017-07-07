@@ -39,6 +39,7 @@
         <module>plugin-serverservice-archetype</module>
         <module>plugin-json-archetype</module>
         <module>agent-archetype</module>
+	<module>stacks-archetype</module>
     </modules>
     <scm>
         <connection>scm:git:git@github.com:eclipse/che-archetypes.git</connection>
