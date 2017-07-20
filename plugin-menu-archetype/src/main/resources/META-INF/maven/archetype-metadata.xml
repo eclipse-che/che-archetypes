@@ -20,10 +20,6 @@
         <fileSet filtered="false" encoding="UTF-8">
             <directory></directory>
             <includes>
-                <include>build.include</include>
-                <include>build.sh</include>
-                <include>run.sh</include>
-                <include>stop.sh</include>
                 <include>LICENSE</include>
                 <include>.mvn/*</include>
             </includes>
