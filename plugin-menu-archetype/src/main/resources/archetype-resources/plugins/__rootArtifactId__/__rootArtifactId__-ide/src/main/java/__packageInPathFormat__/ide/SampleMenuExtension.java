@@ -13,7 +13,7 @@ import static org.eclipse.che.ide.api.action.IdeActions.GROUP_MAIN_MENU;
 import static org.eclipse.che.ide.api.constraints.Anchor.AFTER;
 
 import com.google.inject.Inject;
-import it.pkg.ide.action.SampleAction;
+import ${package}.ide.action.SampleAction;
 import org.eclipse.che.ide.api.action.ActionManager;
 import org.eclipse.che.ide.api.action.DefaultActionGroup;
 import org.eclipse.che.ide.api.constraints.Constraints;
