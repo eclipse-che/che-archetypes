@@ -20,24 +20,23 @@ import com.google.gwt.i18n.client.Messages;
  */
 public interface SampleWizardLocalizationConstant extends Messages {
 
+  @Key("ok")
+  @DefaultMessage("Ok")
+  String buttonOk();
 
-    @Key("ok")
-    @DefaultMessage("Ok")
-    String buttonOk();
+  @Key("cancel")
+  @DefaultMessage("Cancel")
+  String buttonCancel();
 
-    @Key("cancel")
-    @DefaultMessage("Cancel")
-    String buttonCancel();
+  @Key("title")
+  @DefaultMessage("Enter file name and included header")
+  String title();
 
-    @Key("title")
-    @DefaultMessage("Enter file name and included header")
-    String title();
+  @Key("action.description")
+  @DefaultMessage("Create new X file")
+  String createXFileWithIncludedHeader();
 
-    @Key("action.description")
-    @DefaultMessage("Create new X file")
-    String createXFileWithIncludedHeader();
-
-    @Key("action.title")
-    @DefaultMessage("New X file")
-    String newXFile();
+  @Key("action.title")
+  @DefaultMessage("New X file")
+  String newXFile();
 }

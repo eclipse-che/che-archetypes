@@ -10,21 +10,17 @@
  */
 package ${package}.ide.wizard;
 
-import com.google.inject.Provider;
+import static ${package}.shared.Constants.X_PROJECT_TYPE_ID;
 
-import org.eclipse.che.api.workspace.shared.dto.ProjectConfigDto;
+import com.google.inject.Provider;
+import ${package}.ide.SampleWizardExtension;
+import java.util.ArrayList;
+import java.util.List;
+import javax.inject.Inject;
+import javax.validation.constraints.NotNull;
 import org.eclipse.che.ide.api.project.MutableProjectConfig;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 import org.eclipse.che.ide.api.wizard.WizardPage;
-import ${package}.ide.SampleWizardExtension;
-
-import javax.inject.Inject;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-import java.util.List;
-
-import static ${package}.shared.Constants.X_PROJECT_TYPE_ID;
-
 
 /**
  * Provides information for registering X_PROJECT_TYPE_ID wizard type into wizard wizard.
@@ -33,26 +29,26 @@ import static ${package}.shared.Constants.X_PROJECT_TYPE_ID;
  */
 public class SampleWizardRegistrar implements ProjectWizardRegistrar {
 
-    private final List<Provider<? extends WizardPage<MutableProjectConfig>>> wizardPages;
+  private final List<Provider<? extends WizardPage<MutableProjectConfig>>> wizardPages;
 
-    @Inject
-    public SampleWizardRegistrar(Provider<SamplePagePresenter> samplePagePresenter) {
-        wizardPages = new ArrayList<>();
-        wizardPages.add(samplePagePresenter);
-    }
+  @Inject
+  public SampleWizardRegistrar(Provider<SamplePagePresenter> samplePagePresenter) {
+    wizardPages = new ArrayList<>();
+    wizardPages.add(samplePagePresenter);
+  }
 
-    @NotNull
-    public String getProjectTypeId() {
-        return X_PROJECT_TYPE_ID;
-    }
+  @NotNull
+  public String getProjectTypeId() {
+    return X_PROJECT_TYPE_ID;
+  }
 
-    @NotNull
-    public String getCategory() {
-        return SampleWizardExtension.X_CATEGORY;
-    }
+  @NotNull
+  public String getCategory() {
+    return SampleWizardExtension.X_CATEGORY;
+  }
 
-    @NotNull
-    public List<Provider<? extends WizardPage<MutableProjectConfig>>> getWizardPages() {
-        return wizardPages;
-    }
+  @NotNull
+  public List<Provider<? extends WizardPage<MutableProjectConfig>>> getWizardPages() {
+    return wizardPages;
+  }
 }

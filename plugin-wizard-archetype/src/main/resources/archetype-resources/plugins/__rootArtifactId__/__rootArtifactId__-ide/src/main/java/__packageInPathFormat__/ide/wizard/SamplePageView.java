@@ -11,19 +11,16 @@
 package ${package}.ide.wizard;
 
 import com.google.inject.ImplementedBy;
-
 import org.eclipse.che.ide.api.mvp.View;
 
 @ImplementedBy(SamplePageViewImpl.class)
 public interface SamplePageView extends View<SamplePageView.ActionDelegate> {
 
-    String getCompilerVersion();
+  String getCompilerVersion();
 
-    void setCompilerVersion(String version);
+  void setCompilerVersion(String version);
 
-
-    interface ActionDelegate {
-        void onCompilerVersionChanged();
-
-    }
+  interface ActionDelegate {
+    void onCompilerVersionChanged();
+  }
 }

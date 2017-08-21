@@ -12,18 +12,17 @@ package ${package}.inject;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
+import ${package}.projecttype.SampleProjectType;
 import org.eclipse.che.api.project.server.type.ProjectTypeDef;
 import org.eclipse.che.inject.DynaModule;
-import ${package}.projecttype.SampleProjectType;
 
-/**
- * @author Vitaly Parfonov
- */
+/** @author Vitaly Parfonov */
 @DynaModule
 public class SampleWizardModule extends AbstractModule {
-    @Override
-    protected void configure() {
-        Multibinder<ProjectTypeDef> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectTypeDef.class);
-        projectTypeMultibinder.addBinding().to(SampleProjectType.class);
-    }
+  @Override
+  protected void configure() {
+    Multibinder<ProjectTypeDef> projectTypeMultibinder =
+        Multibinder.newSetBinder(binder(), ProjectTypeDef.class);
+    projectTypeMultibinder.addBinding().to(SampleProjectType.class);
+  }
 }

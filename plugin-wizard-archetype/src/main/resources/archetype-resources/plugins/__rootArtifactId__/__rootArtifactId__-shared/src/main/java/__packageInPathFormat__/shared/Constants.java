@@ -12,30 +12,20 @@ package ${package}.shared;
 
 /** @author Vitalii Parfonov */
 public final class Constants {
-    /**
-     * Language attribute name
-     */
-    public static String LANGUAGE          = "language";
-    /**
-     * X Project Type ID
-     */
-    public static String X_PROJECT_TYPE_ID = "x";
+  /** Language attribute name */
+  public static String LANGUAGE = "language";
+  /** X Project Type ID */
+  public static String X_PROJECT_TYPE_ID = "x";
 
-    /**
-     * C Language
-     */
-    public static String C_LANG = "c_lang";
+  /** C Language */
+  public static String C_LANG = "c_lang";
 
-    /**
-     * Default extension for C files
-     */
-    public static String C_EXT = "c";
+  /** Default extension for C files */
+  public static String C_EXT = "c";
 
-    public static String DEFAULT_CCC_COMPILER_VERSION = "5.3";
+  public static String DEFAULT_CCC_COMPILER_VERSION = "5.3";
 
-    public static String COMPILER_VERSION_ATRIBUTE    = "compiler_version";
+  public static String COMPILER_VERSION_ATRIBUTE = "compiler_version";
 
-    private Constants() {
-    }
-
+  private Constants() {}
 }

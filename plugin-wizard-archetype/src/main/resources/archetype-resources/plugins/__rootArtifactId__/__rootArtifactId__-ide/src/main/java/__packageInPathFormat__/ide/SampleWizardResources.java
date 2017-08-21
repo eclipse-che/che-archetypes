@@ -12,18 +12,15 @@ package ${package}.ide;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
-
 import org.vectomatic.dom.svg.ui.SVGResource;
 
-/**
- * @author Vitalii Parfonov
- */
+/** @author Vitalii Parfonov */
 public interface SampleWizardResources extends ClientBundle {
-    SampleWizardResources INSTANCE = GWT.create(SampleWizardResources.class);
+  SampleWizardResources INSTANCE = GWT.create(SampleWizardResources.class);
 
-    @Source("svg/c_file.svg")
-    SVGResource xFile();
+  @Source("svg/c_file.svg")
+  SVGResource xFile();
 
-    @Source("svg/category.svg")
-    SVGResource category();
+  @Source("svg/category.svg")
+  SVGResource category();
 }
