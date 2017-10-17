@@ -83,10 +83,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <configuration>
-                    <usedDependencies>
+                    <ignoredUnusedDeclaredDependencies>
                         <param>${groupId}:plugin-json-shared</param>
                         <param>org.eclipse.che.core:che-core-ide-app</param>
-                    </usedDependencies>
+                    </ignoredUnusedDeclaredDependencies>
                 </configuration>
             </plugin>
         </plugins>
