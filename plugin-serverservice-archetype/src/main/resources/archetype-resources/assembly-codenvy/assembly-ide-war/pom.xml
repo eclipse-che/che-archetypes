@@ -208,12 +208,12 @@
                             <includes>
                                 <include>_app/browserNotSupported.js</include>
                                 <include>_app/activity.js</include>
+                                <include>_app/IDE.html</include>
                                 <include>META-INF/context.xml</include>
                                 <include>WEB-INF/rewrite.config</include>
                                 <include>WEB-INF/web.xml</include>
                                 <include>WEB-INF/lib/*.*</include>
                                 <include>WEB-INF/classes/**/*</include>
-                                <include>IDE.jsp</include>
                             </includes>
                         </overlay>
                         <overlay></overlay>
