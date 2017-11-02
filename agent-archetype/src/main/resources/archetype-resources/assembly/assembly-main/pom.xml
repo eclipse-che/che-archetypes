@@ -18,7 +18,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Installer Sample :: Che Assembly :: Assemblies Tomcat</name>
+    <name>Agent Sample :: Che Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>

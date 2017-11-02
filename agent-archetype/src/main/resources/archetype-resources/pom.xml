@@ -20,7 +20,7 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>pom</packaging>
-    <name>Installer Sample :: Parent</name>
+    <name>Agent Sample :: Parent</name>
     <url>https://www.eclipse.org/che/</url>
     <licenses>
         <license>

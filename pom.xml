@@ -48,7 +48,7 @@
         <url>https://github.com/eclipse/che-archetypes</url>
     </scm>
     <properties>
-        <che.version>5.20.0-SNAPSHOT</che.version>
+        <che.version>6.0.0-M2-SNAPSHOT</che.version>
         <version.archetype.plugin>2.4</version.archetype.plugin>
     </properties>
     <dependencyManagement>
