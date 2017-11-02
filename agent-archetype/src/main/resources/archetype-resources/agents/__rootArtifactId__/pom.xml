@@ -17,8 +17,8 @@
         <groupId>${groupId}</groupId>
         <version>${version}</version>
     </parent>
-    <artifactId>sample-agent</artifactId>
-    <name>Agent Sample :: Agents :: Sample</name>
+    <artifactId>sample-installer</artifactId>
+    <name>Installer Sample :: Installers :: Sample</name>
     <properties>
         <findbugs.failonerror>false</findbugs.failonerror>
     </properties>

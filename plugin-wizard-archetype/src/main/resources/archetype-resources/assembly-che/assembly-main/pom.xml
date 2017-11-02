@@ -12,7 +12,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>plugin-wizard-assembly-parent</artifactId>
-        <groupId>${groupId}.che</groupId>
+        <groupId>${groupId}</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
@@ -20,12 +20,12 @@
     <name>Wizard Sample :: Che Assembly :: Assemblies Tomcat</name>
     <dependencies>
         <dependency>
-            <groupId>${groupId}.che</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>assembly-ide-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
-            <groupId>${groupId}.che</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>assembly-wsagent-server</artifactId>
             <type>tar.gz</type>
         </dependency>
