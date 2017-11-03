@@ -32,7 +32,7 @@
             <useProjectArtifact>false</useProjectArtifact>
             <unpack>false</unpack>
             <outputDirectory>tomcat/webapps</outputDirectory>
-            <outputFileNameMapping>wsmaster.war</outputFileNameMapping>
+            <outputFileNameMapping>api.war</outputFileNameMapping>
             <includes>
                 <include>${groupId}:assembly-wsmaster-war</include>
             </includes>
@@ -45,7 +45,7 @@
             <outputDirectory></outputDirectory>
             <excludes>
                 <exclude>**/tomcat/webapps/ROOT.war</exclude>
-                <exclude>**/tomcat/webapps/wsmaster.war</exclude>
+                <exclude>**/tomcat/webapps/api.war</exclude>
             </excludes>
         </fileSet>
     </fileSets>
