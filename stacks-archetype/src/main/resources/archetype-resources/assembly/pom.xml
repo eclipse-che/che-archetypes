@@ -16,8 +16,8 @@
         <version>${version}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>${groupId}.codenvy</groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Stacks Sample :: Codenvy Assembly :: Parent</name>
+    <name>Stacks Sample :: Che Assembly :: Parent</name>
 </project>

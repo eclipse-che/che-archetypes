@@ -14,7 +14,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>stacks-archetype-assembly-parent</artifactId>
-        <groupId>${groupId}.che</groupId>
+        <groupId>${groupId}</groupId>
         <version>${version}</version>
     </parent>
     <artifactId>${artifactId}</artifactId>
