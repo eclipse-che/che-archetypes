@@ -31,7 +31,7 @@
         "default": {
           "machines": {
             "dev-machine": {
-              "agents": [
+              "installers": [
                 "org.eclipse.che.exec",
                 "org.eclipse.che.terminal",
                 "org.eclipse.che.ws-agent",
@@ -41,7 +41,7 @@
               "attributes": {}
             },
             "db": {
-              "agents": [
+              "installers": [
                 "org.eclipse.che.exec",
                 "org.eclipse.che.terminal"
               ],

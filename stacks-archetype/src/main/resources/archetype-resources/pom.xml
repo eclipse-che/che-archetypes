@@ -31,7 +31,6 @@
     </licenses>
     <properties>
         <che.version>${cheVersion}</che.version>
-        <codenvy.version>${codenvyVersion}</codenvy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -41,37 +40,19 @@
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-main</artifactId>
                 <type>tar.gz</type>
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-main</artifactId>
                 <type>zip</type>
                 <version>${version}</version>
             </dependency>
             <dependency>
-                <groupId>${groupId}.che</groupId>
-                <artifactId>assembly-wsmaster-war</artifactId>
-                <type>war</type>
-                <version>${version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
-                <artifactId>assembly-main</artifactId>
-                <type>tar.gz</type>
-                <version>${version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
-                <artifactId>assembly-main</artifactId>
-                <type>zip</type>
-                <version>${version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}.codenvy</groupId>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <type>war</type>
                 <version>${version}</version>
@@ -80,13 +61,6 @@
                 <groupId>org.eclipse.che</groupId>
                 <artifactId>che-parent</artifactId>
                 <version>${che.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.codenvy.onpremises</groupId>
-                <artifactId>onpremises-assembly-parent</artifactId>
-                <version>${codenvy.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

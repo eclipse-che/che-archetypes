@@ -1,0 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+{
+  "id": "${groupId}.sample",
+  "version": "1.0.0",
+  "name": "Sample agent",
+  "description": "Sample agent",
+  "dependencies": [],
+  "properties": {}
+}
