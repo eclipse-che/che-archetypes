@@ -35,6 +35,12 @@
         <dependencies>
             <dependency>
                 <groupId>${groupId}</groupId>
+                <artifactId>che-ide-gwt-app</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
                 <artifactId>assembly-ide-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
@@ -61,6 +67,7 @@
                 <groupId>${groupId}</groupId>
                 <artifactId>plugin-wizard-ide</artifactId>
                 <version>${project.version}</version>
+                <type>gwt-lib</type>
             </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
@@ -71,6 +78,12 @@
                 <groupId>${groupId}</groupId>
                 <artifactId>plugin-wizard-shared</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>plugin-wizard-shared</artifactId>
+                <version>${project.version}</version>
+                <classifier>sources</classifier>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.che</groupId>
