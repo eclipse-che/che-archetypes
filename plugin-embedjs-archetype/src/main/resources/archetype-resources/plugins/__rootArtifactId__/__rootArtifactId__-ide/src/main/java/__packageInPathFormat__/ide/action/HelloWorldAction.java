@@ -10,14 +10,14 @@ package ${package}.ide.action;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import ${package}.ide.view.HelloWorldViewPresenter;
-import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
+import org.eclipse.che.ide.api.action.BaseAction;
 import org.eclipse.che.ide.api.parts.PartStackType;
 import org.eclipse.che.ide.api.parts.WorkspaceAgent;
 
 /** Action for opening a part which embeds javascript code. */
 @Singleton
-public class HelloWorldAction extends Action {
+public class HelloWorldAction extends BaseAction {
 
   public static final String ACTION_ID = "helloWorldFromJSAction";
 
