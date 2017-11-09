@@ -17,9 +17,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>plugin-embedjs-parent</artifactId>
-    <packaging>pom</packaging>
-    <name>Plugin Embed JavaScript :: Plugin Embed JavaScript :: Parent</name>
-    <modules>
-        <module>${rootArtifactId}-ide</module>
-    </modules>
+        <packaging>pom</packaging>
+        <name>Plugin Embed JavaScript :: Plugin Embed JavaScript :: Parent</name>
+        <modules>
+            <module>${rootArtifactId}-ide</module>
+        </modules>
 </project>

@@ -6,8 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  */
-function HelloWorld(
-    element, contents) {
-    element.textContent = contents;
+function HelloWorld(element, contents) {
+  element.textContent = contents;
 };
 

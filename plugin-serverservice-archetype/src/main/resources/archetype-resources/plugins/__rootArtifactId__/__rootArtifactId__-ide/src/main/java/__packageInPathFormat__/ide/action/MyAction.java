@@ -15,8 +15,8 @@ import ${package}.ide.MyServiceClient;
 import org.eclipse.che.api.promises.client.Operation;
 import org.eclipse.che.api.promises.client.OperationException;
 import org.eclipse.che.api.promises.client.PromiseError;
-import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
+import org.eclipse.che.ide.api.action.BaseAction;
 import org.eclipse.che.ide.api.notification.NotificationManager;
 import org.eclipse.che.ide.api.notification.StatusNotification;
 
@@ -25,7 +25,7 @@ import org.eclipse.che.ide.api.notification.StatusNotification;
  *
  * @author Edgar Mueller
  */
-public class MyAction extends Action {
+public class MyAction extends BaseAction {
 
   private final NotificationManager notificationManager;
   private final MyServiceClient serviceClient;

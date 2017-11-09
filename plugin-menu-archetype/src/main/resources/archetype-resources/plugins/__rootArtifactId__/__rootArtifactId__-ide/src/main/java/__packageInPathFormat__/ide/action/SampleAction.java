@@ -10,14 +10,14 @@ package ${package}.ide.action;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import org.eclipse.che.ide.api.action.Action;
 import org.eclipse.che.ide.api.action.ActionEvent;
+import org.eclipse.che.ide.api.action.BaseAction;
 import org.eclipse.che.ide.api.notification.NotificationManager;
 import org.eclipse.che.ide.api.notification.StatusNotification;
 
 /** Sample action. */
 @Singleton
-public class SampleAction extends Action {
+public class SampleAction extends BaseAction {
 
   private final NotificationManager notificationManager;
 

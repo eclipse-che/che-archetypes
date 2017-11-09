@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>JSON Sample :: Che Assembly :: Workspace Agent War Packaging</name>
+    <name>JSON Sample :: Che Assembly :: Workspace Agent War Assembly</name>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.che.core</groupId>

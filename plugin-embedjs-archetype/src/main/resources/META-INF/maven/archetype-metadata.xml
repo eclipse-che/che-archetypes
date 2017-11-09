@@ -32,15 +32,9 @@
                         <module id="ide" dir="__rootArtifactId__-ide" name="ide">
                             <fileSets>
                                 <fileSet filtered="true" encoding="UTF-8">
-                                    <directory>src/main/java</directory>
+                                    <directory>src/main</directory>
                                     <includes>
                                         <include>**/*.java</include>
-                                        <include>**/*.xml</include>
-                                    </includes>
-                                </fileSet>
-                                <fileSet filtered="true" encoding="UTF-8">
-                                    <directory>src/main/resources</directory>
-                                    <includes>
                                         <include>**/*.svg</include>
                                         <include>**/*.xml</include>
                                         <include>**/*.js</include>
@@ -57,7 +51,7 @@
                 <module id="assembly-ide-war" dir="assembly-ide-war" name="assembly-ide-war">
                     <fileSets>
                         <fileSet filtered="true" encoding="UTF-8">
-                            <directory>src/main/resources</directory>
+                            <directory>src/main</directory>
                             <includes>
                                 <include>**/*.xml</include>
                             </includes>

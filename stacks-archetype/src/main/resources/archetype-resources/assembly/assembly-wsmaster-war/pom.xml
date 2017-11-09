@@ -19,7 +19,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Stacks Sample :: Che Assembly :: Workspace Master War Packaging</name>
+    <name>Stacks Sample :: Che Assembly :: Workspace Master Assembly</name>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.che</groupId>

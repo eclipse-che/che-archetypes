@@ -17,11 +17,4 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <name>JSON Sample :: Plugin JSON :: Shared</name>
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-            </resource>
-        </resources>
-    </build>
 </project>

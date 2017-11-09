@@ -25,4 +25,16 @@
         <module>${rootArtifactId}-server</module>
         <module>${rootArtifactId}-ide</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <moduleName>${package}.ServerServiceExtension</moduleName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

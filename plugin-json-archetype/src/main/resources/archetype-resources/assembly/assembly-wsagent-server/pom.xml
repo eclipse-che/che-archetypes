@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>JSON Sample :: Che Assembly :: Assembly Workspace Agent Server</name>
+    <name>JSON Sample :: Che Assembly :: Workspace Agent Tomcat Assembly</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>

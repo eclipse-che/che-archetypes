@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Plugin ServerService :: Che Assembly :: Workspace Agent War Packaging</name>
+    <name>Plugin ServerService :: Che Assembly :: Workspace Master Assembly</name>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.che</groupId>

@@ -16,9 +16,9 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import ${package}.shared.Constants;
 import org.eclipse.che.ide.api.app.AppContext;
-import org.eclipse.che.ide.api.project.ProjectServiceClient;
 import org.eclipse.che.ide.api.resources.Container;
 import org.eclipse.che.ide.api.resources.Resource;
+import org.eclipse.che.ide.project.ProjectServiceClient;
 import org.eclipse.che.ide.resource.Path;
 
 /**
@@ -77,6 +77,6 @@ public class NewXFilePresenter implements NewXFileView.ActionDelegate {
   private void createFile(
       final String path, final String nameWithoutExtension, final String content) {
     projectServiceClient.createFile(
-        Path.valueOf(path + nameWithoutExtension + Constants.C_EXT), content);
+        Path.valueOf(path).append(nameWithoutExtension + '.' + Constants.C_EXT), content);
   }
 }

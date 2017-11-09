@@ -17,20 +17,25 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Menu Sample :: Che Assembly :: Assembly Parent</name>
+    <name>Menu Sample :: Che Assembly :: IDE Assembly</name>
     <properties>
-        <gwt.log.enable>false</gwt.log.enable>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
         <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.che.core</groupId>
             <artifactId>che-ide-core</artifactId>
+            <type>gwt-lib</type>
         </dependency>
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>plugin-menu-ide</artifactId>
+            <type>gwt-lib</type>
         </dependency>
         <dependency>
             <groupId>org.eclipse.che</groupId>
@@ -58,21 +63,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <executions>
-                    <execution>
-                        <id>gwt-xml</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>org.eclipse.che.util.GwtXmlGenerator</mainClass>
-                            <arguments>
-                                <argument>--rootDir=${generated.sources.directory}</argument>
-                                <argument>--loggingEnabled=${gwt.log.enable}</argument>
-                                <argument>--gwtFileName=${packageInPathFormat}/ide/IDE.gwt.xml</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
                     <execution>
                         <id>extManager-client</id>
                         <phase>generate-sources</phase>
@@ -132,42 +122,24 @@
             </plugin>
             <!-- GWT Maven Plugin -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>net.ltgt.gwt.maven</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
+                <extensions>true</extensions>
                 <executions>
                     <execution>
                         <goals>
+                            <goal>generate-module</goal>
                             <goal>compile</goal>
-                            <!--<goal>test</goal>-->
                         </goals>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-codeserver</artifactId>
-                        <version>${com.google.gwt.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-dev</artifactId>
-                        <version>${com.google.gwt.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-user</artifactId>
-                        <version>${com.google.gwt.version}</version>
-                    </dependency>
-                </dependencies>
                 <configuration>
-                    <gwtSdkFirstInClasspath>true</gwtSdkFirstInClasspath>
-                    <extraJvmArgs>${gwt.compiler.extraJvmArgs}</extraJvmArgs>
-                    <modules>
-                        <module>${package}.ide.IDE</module>
-                    </modules>
-                    <!-- don' remove it we will use it then need to found bug in compiled JS -->
-                    <!--style>DETAILED</style-->
-                    <logLevel>${gwt.compiler.logLevel}</logLevel>
+                    <moduleName>org.eclipse.che.ide.IDE</moduleName>
+                    <moduleShortName>_app</moduleShortName>
+                    <jvmArgs>
+                        <arg>${gwt.compiler.jvmArgs.Xss}</arg>
+                        <arg>${gwt.compiler.jvmArgs.Xmx}</arg>
+                    </jvmArgs>
                 </configuration>
             </plugin>
             <plugin>
@@ -208,6 +180,7 @@
                                 <include>WEB-INF/rewrite.config</include>
                                 <include>WEB-INF/web.xml</include>
                                 <include>WEB-INF/classes/org/eclipse/che/*.class</include>
+                                <include>WEB-INF/lib/</include>
                             </includes>
                         </overlay>
                         <overlay></overlay>

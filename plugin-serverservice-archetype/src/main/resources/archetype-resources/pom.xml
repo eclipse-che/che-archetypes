@@ -49,6 +49,7 @@
                 <groupId>${groupId}</groupId>
                 <artifactId>plugin-serverservice-ide</artifactId>
                 <version>${project.version}</version>
+                <type>gwt-lib</type>
             </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
@@ -91,6 +92,23 @@
     <build>
         <plugins>
             <plugin>
+                <!-- Configuration for launching GWT Super DevMode -->
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <projects>assembly-ide-war</projects>
+                    <codeserverArgs>
+                        <arg>-noprecompile</arg>
+                        <arg>-noincremental</arg>
+                    </codeserverArgs>
+                    <jvmArgs>
+                        <arg>${gwt.compiler.jvmArgs.Xss}</arg>
+                        <arg>${gwt.compiler.jvmArgs.Xmx}</arg>
+                    </jvmArgs>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
                 <configuration>
@@ -109,4 +127,24 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>sdm-in-che</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.ltgt.gwt.maven</groupId>
+                        <artifactId>gwt-maven-plugin</artifactId>
+                        <configuration>
+                            <codeserverArgs combine.children="append">
+                                <!-- CodeServer launched inside a container must be reachable at host machine -->
+                                <arg>-bindAddress</arg>
+                                <arg>0.0.0.0</arg>
+                            </codeserverArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

@@ -60,7 +60,7 @@ public class CountLinesAction extends JsonExampleProjectAction {
   public void actionPerformed(ActionEvent e) {
 
     String url =
-        appContext.getDevMachine().getWsAgentBaseUrl()
+        appContext.getWsAgentServerApiEndpoint()
             + "/json-example/"
             + appContext.getWorkspaceId()
             + appContext.getRootProject().getLocation();
