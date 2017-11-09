@@ -77,6 +77,6 @@ public class NewXFilePresenter implements NewXFileView.ActionDelegate {
   private void createFile(
       final String path, final String nameWithoutExtension, final String content) {
     projectServiceClient.createFile(
-        Path.valueOf(path + nameWithoutExtension + Constants.C_EXT), content);
+        Path.valueOf(path).append(nameWithoutExtension + '.' + Constants.C_EXT), content);
   }
 }

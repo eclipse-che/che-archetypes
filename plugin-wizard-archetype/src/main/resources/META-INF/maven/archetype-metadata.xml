@@ -24,20 +24,6 @@
     </fileSet>
   </fileSets>
   <modules>
-    <module id="ide" dir="ide" name="ide">
-      <modules>
-        <module id="che-ide-gwt-app" dir="che-ide-gwt-app" name="che-ide-gwt-app">
-          <fileSets>
-            <fileSet filtered="true" encoding="UTF-8">
-              <directory>src/main</directory>
-              <includes>
-                <include>**/*.xml</include>
-              </includes>
-            </fileSet>
-          </fileSets>
-        </module>
-      </modules>
-    </module>
     <module id="plugin" dir="plugins" name="plugin">
       <modules>
         <module id="__rootArtifactId__" dir="__rootArtifactId__" name="__rootArtifactId__">
