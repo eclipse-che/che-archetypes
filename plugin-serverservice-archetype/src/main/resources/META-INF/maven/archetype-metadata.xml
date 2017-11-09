@@ -41,15 +41,9 @@
             <module id="plugin-serverservice-ide" dir="__rootArtifactId__-ide" name="plugin-serverservice-ide">
               <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
-                  <directory>src/main/java</directory>
+                  <directory>src/main</directory>
                   <includes>
                     <include>**/*.java</include>
-                    <include>**/*.xml</include>
-                  </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                  <directory>src/main/resources</directory>
-                  <includes>
                     <include>**/*.xml</include>
                     <include>**/*.properties</include>
                   </includes>
@@ -66,7 +60,7 @@
         <module id="assembly-ide-war" dir="assembly-ide-war" name="assembly-ide-war">
           <fileSets>
             <fileSet filtered="true" encoding="UTF-8">
-              <directory>src/main/resources</directory>
+              <directory>src/main</directory>
               <includes>
                 <include>**/*.xml</include>
               </includes>

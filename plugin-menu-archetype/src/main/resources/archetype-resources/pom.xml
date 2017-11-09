@@ -135,4 +135,22 @@
             </plugin>
         </plugins>
     </build>
+    <profile>
+        <id>sdm-in-che</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>net.ltgt.gwt.maven</groupId>
+                    <artifactId>gwt-maven-plugin</artifactId>
+                    <configuration>
+                        <codeserverArgs combine.children="append">
+                            <!-- CodeServer launched inside a container must be reachable at host machine -->
+                            <arg>-bindAddress</arg>
+                            <arg>0.0.0.0</arg>
+                        </codeserverArgs>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
 </project>

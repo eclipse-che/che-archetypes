@@ -6,7 +6,7 @@
 package ${package}.ide.action;
 
 import static ${package}.shared.Constants.JSON_EXAMPLE_PROJECT_TYPE_ID;
-import static org.eclipse.che.ide.workspace.perspectives.project.ProjectPerspective.PROJECT_PERSPECTIVE_ID;
+import static org.eclipse.che.ide.part.perspectives.project.ProjectPerspective.PROJECT_PERSPECTIVE_ID;
 
 import com.google.common.base.Optional;
 import java.util.Collections;
@@ -37,7 +37,7 @@ public abstract class JsonExampleProjectAction extends AbstractPerspectiveAction
       @NotNull String text,
       @NotNull String description,
       @Nullable SVGResource svgResource) {
-    super(Collections.singletonList(PROJECT_PERSPECTIVE_ID), text, description, null, svgResource);
+    super(Collections.singletonList(PROJECT_PERSPECTIVE_ID), text, description, svgResource);
     this.appContext = appContext;
   }
 

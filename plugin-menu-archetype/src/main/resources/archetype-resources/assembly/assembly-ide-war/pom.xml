@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>war</packaging>
-    <name>Menu Sample :: Che Assembly :: Assembly Parent</name>
+    <name>Menu Sample :: Che Assembly :: IDE Assembly</name>
     <properties>
         <generated.sources.directory>${project.build.directory}/generated-sources/gen</generated.sources.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

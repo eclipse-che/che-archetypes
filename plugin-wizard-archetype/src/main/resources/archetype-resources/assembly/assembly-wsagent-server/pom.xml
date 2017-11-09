@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Wizard Sample :: Che Assembly :: Assembly Workspace Agent Server</name>
+    <name>Wizard Sample :: Che Assembly :: Workspace Agent Assembly</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>

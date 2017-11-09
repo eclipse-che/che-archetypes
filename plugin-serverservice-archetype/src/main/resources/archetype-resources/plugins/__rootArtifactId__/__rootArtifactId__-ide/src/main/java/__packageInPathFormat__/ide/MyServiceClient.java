@@ -55,7 +55,7 @@ public class MyServiceClient {
    */
   public Promise<String> getHello(String name) {
     return asyncRequestFactory
-        .createGetRequest(appContext.getMasterEndpoint() + "/hello/" + name)
+        .createGetRequest(appContext.getMasterApiEndpoint() + "/hello/" + name)
         .loader(loaderFactory.newLoader("Waiting for hello..."))
         .send(new StringUnmarshaller());
   }
