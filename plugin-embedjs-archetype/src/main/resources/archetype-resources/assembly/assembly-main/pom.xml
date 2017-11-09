@@ -17,7 +17,7 @@
     </parent>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>
-    <name>Plugin Embed JavaScript :: Che Assembly :: Assembly Parent</name>
+    <name>Plugin Embed JavaScript :: Che Assembly :: Tomcat Assembly</name>
     <dependencies>
         <dependency>
             <groupId>${groupId}</groupId>
