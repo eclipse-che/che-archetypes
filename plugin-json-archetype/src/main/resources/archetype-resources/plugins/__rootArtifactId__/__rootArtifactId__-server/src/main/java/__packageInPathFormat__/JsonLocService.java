@@ -11,12 +11,13 @@ import java.util.Map;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import org.eclipse.che.api.core.ConflictException;
 import org.eclipse.che.api.core.ForbiddenException;
 import org.eclipse.che.api.core.NotFoundException;
 import org.eclipse.che.api.core.ServerException;
-import org.eclipse.che.api.project.server.FileEntry;
+import org.eclipse.che.api.fs.server.FsManager;
+import org.eclipse.che.api.fs.server.WsPathUtils;
 import org.eclipse.che.api.project.server.ProjectManager;
-import org.eclipse.che.api.project.server.RegisteredProject;
 
 /** Service for counting lines of code within all JSON files in a given project. */
 @Path("json-example/{ws-id}")
@@ -24,24 +25,28 @@ public class JsonLocService {
 
   private ProjectManager projectManager;
 
+  private FsManager fsManager;
+
   /**
    * Constructor for the JSON Exapmle lines of code service.
    *
    * @param projectManager the {@link ProjectManager} that is used to access the project resources
    */
   @Inject
-  public JsonLocService(ProjectManager projectManager) {
+  public JsonLocService(ProjectManager projectManager, FsManager fsManager) {
     this.projectManager = projectManager;
+    this.fsManager = fsManager;
   }
 
-  private static int countLines(FileEntry fileEntry) throws ServerException, ForbiddenException {
-    String content = fileEntry.getVirtualFile().getContentAsString();
+  private int countLines(String wsPath)
+      throws ServerException, NotFoundException, ConflictException {
+    String content = fsManager.readAsString(wsPath);
     String[] lines = content.split("\r\n|\r|\n");
     return lines.length;
   }
 
-  private static boolean isJsonFile(FileEntry fileEntry) {
-    return fileEntry.getName().endsWith("json");
+  private static boolean isJsonFile(String wsPath) {
+    return wsPath.endsWith(".json");
   }
 
   /**
@@ -57,14 +62,12 @@ public class JsonLocService {
   @GET
   @Path("{projectPath}")
   public Map<String, String> countLinesPerFile(@PathParam("projectPath") String projectPath)
-      throws ServerException, NotFoundException, ForbiddenException {
+      throws ServerException, NotFoundException, ForbiddenException, ConflictException {
 
     Map<String, String> linesPerFile = new LinkedHashMap<>();
-    RegisteredProject project = projectManager.getProject(projectPath);
-
-    for (FileEntry child : project.getBaseFolder().getChildFiles()) {
-      if (isJsonFile(child)) {
-        linesPerFile.put(child.getName(), Integer.toString(countLines(child)));
+    for (String wsPath : fsManager.getFileWsPaths(projectPath)) {
+      if (isJsonFile(wsPath)) {
+        linesPerFile.put(WsPathUtils.nameOf(wsPath), Integer.toString(countLines(wsPath)));
       }
     }
 
