@@ -48,8 +48,8 @@
         <url>https://github.com/eclipse/che-archetypes</url>
     </scm>
     <properties>
-        <che.version>5.22.0</che.version>
-        <codenvy.version>5.22.0</codenvy.version>
+        <che.version>5.22.1-SNAPSHOT</che.version>
+        <codenvy.version>5.22.1-SNAPSHOT</codenvy.version>
         <version.archetype.plugin>2.4</version.archetype.plugin>
     </properties>
     <dependencyManagement>
