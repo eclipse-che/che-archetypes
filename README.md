@@ -1,3 +1,5 @@
+# THIS IS DEPRECATED REPOSITORY.
+
 # Eclipse Che & Codenvy Assembly Generator
 [Eclipse Che](www.eclipse.org/che) is a next-generation Eclipse IDE, developer workspace server and cloud IDE. Che is customizable with extensions, plugins, agents, branding, stacks, and templates. These modifications can be repackaged into new assemblies that are distributed to users. 
 
